@@ -1,0 +1,127 @@
+// ===========
+// header
+// ===========
+.header
+	background-color white
+	backface-visibility hidden
+	border-top 10px #7d7a7b solid
+	padding 0 14px
+	position fixed
+	width 100%
+	z-index 2000
+	
+	// @media (max-width menuViewPort - 1)
+	// 	height 110px
+	
+	@media (min-width menuViewPort)
+		position absolute
+	
+
+	&.sticky
+		@media (min-width menuViewPort)
+			animation sticky .6s ease
+			background-color white
+			border-top none
+			box-shadow 0 2px 2px rgba(black, .2)
+			display flex
+			position fixed
+			top 0
+			width 100%
+			z-index 100
+			
+
+@keyframes sticky
+	0%
+		transform translateY(-100%)	
+	100%
+		transform translateY(0)
+
+
+
+
+
+
+// =================================
+.header--wrap
+	align-items center
+	display flex
+	height 120px
+	justify-content space-between
+	position relative
+	custom-size(siteWidth)
+	
+	@media (min-width 425px)
+		// justify-content center
+		padding-left 0
+
+
+	.sticky &
+		@media (min-width menuViewPort)
+			height 80px
+			
+		@media (min-width 1280px)
+			padding 0 40px
+
+
+
+.header--logo
+	// text-align center
+	
+	img
+		@media (max-width menuViewPort - 1)
+			width 200px
+			
+		@media (min-width menuViewPort) and (max-width 1200px)
+			width 200px
+			
+		.sticky &
+			@media (min-width menuViewPort)
+				padding-right 40px
+				width 200px
+
+
+
+
+
+
+// =================================
+.header--menu---wrap
+	@media (max-width menuViewPort - 1)
+		position absolute
+		right 0
+		top 90px
+		transition transform .4s ease .1s
+		transform translateX(120%)
+		
+		.active&
+			height calc(100vh - 150px)
+			overflow auto
+			transform translateX(0px)
+		
+	@media (min-width menuViewPort)
+		background-color white
+		display flex
+		padding-bottom 10px
+	
+	.sticky &
+		flex 1 1
+
+
+
+
+
+
+// ============
+// footer
+// ============
+
+.footer
+	background-color lightColorMaster
+	padding 20px 0
+	
+.footer--main
+	font-size 12px
+	text-align center
+	
+	p
+		line-height 1.8

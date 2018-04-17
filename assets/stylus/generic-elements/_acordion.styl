@@ -1,0 +1,61 @@
+// acordion
+// ===========
+dl
+	> dt
+		cursor pointer
+		position relative
+		
+		a
+			text-decoration none
+	> dd
+		display none
+		
+
+// card acordion
+// ===========
+.card-acordion
+	dt
+		~ dt
+			margin-top 20px
+			
+			
+		&:before
+		&:after
+			content ''
+			position absolute
+			
+		&:after
+			background-image url(../img/acordion-arrow.png)
+			background-position 0 9px
+			height 11px
+			right 20px
+			top 50%
+			transform translateY(-50%)
+			transition .4s ease
+			width 11px
+			z-index 2
+
+		// &.active
+		// 	&:before
+		// 		background #552979
+			
+		// 	&:after
+		// 		background-position 0 -17px
+			
+		// 	p
+		// 		background-color #552979
+		// 		color white
+				
+
+	dd
+		background-color white
+		color darkColorTwo
+		line-height 1.7
+		padding 30px 30px
+		position relative
+		left -1px
+		width calc(100% + 2px)
+		
+		p
+			+ p
+				margin-top 20px

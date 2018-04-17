@@ -1,0 +1,176 @@
+.card
+	// ==================
+	// alinhamento
+	// ==================
+	&-center
+		@extends .txt-center
+		
+
+	// ==================
+	// lista
+	&-grid
+		ul
+			@extends .flex
+			flex-wrap wrap
+					
+					
+	&-grid--two-cols
+		@extends .card-grid
+		
+		ul
+			> li
+				flex-basis: 100%;
+				max-width: 100%;
+				
+				@media (min-width tablet)
+					flex-basis: 50%;
+					max-width: 50%;
+				
+	&-grid--three-cols
+		@extends .card-grid
+		
+		ul
+			> li
+				flex-basis: 100%;
+				max-width: 100%;
+				
+				@media (min-width oldMobile) and (max-width tablet - 1)
+					flex-basis: 50%;
+					max-width: 50%;
+					
+				@media (min-width tablet)
+					flex-basis: 33.333%;
+					max-width: 33.333%;
+					
+	&-grid--four-cols
+		@extends .card-grid
+		
+		ul
+			> li
+				flex-basis: 100%;
+				max-width: 100%;
+
+				@media (min-width oldMobile) and (max-width tablet - 1)
+					flex-basis: 50%;
+					max-width: 50%;
+					
+				@media (min-width tablet) and (max-width desktopSmall - 1)
+					flex-basis: 33.333%;
+					max-width: 33.333%;
+					
+				@media (min-width desktopSmall)
+					flex-basis: 25%;
+					max-width: 25%;
+					
+	&-grid--five-cols
+		@extends .card-grid
+		
+		ul
+			> li
+				flex-basis: 100%;
+				max-width: 100%;
+				
+				@media (min-width oldMobile) and (max-width tablet - 1)
+					flex-basis: 50%;
+					max-width: 50%;
+					
+				@media (min-width tablet) and (max-width desktopSmall - 1)
+					flex-basis: 33.333%;
+					max-width: 33.333%;
+					
+				@media (min-width desktopSmall)
+					flex-basis: 20%;
+					max-width: 20%;
+	
+
+
+					
+	
+	// =======================
+	&-grid--three
+		@extends .card-grid--three-cols
+		
+		li
+			padding 14px
+			
+
+
+
+
+
+	// ==========================
+	&-news--list
+		> .row
+			padding 10px 0
+
+
+
+
+	// ==========================
+	&-list--simple
+		border 1px solid #ebebeb
+		padding 10px
+		
+		ul
+			background #ebebeb
+			padding 20px 20px 20px 50px
+			
+			li
+				font-size 14px
+				margin 20px 0
+				position relative
+				
+				&:before
+					content '\2022'
+					color #C5C5C5
+					position absolute
+					top -1px
+					left -18px
+					font-size 22px
+			
+
+
+
+	// image-text
+	// ===========
+	&-image-text
+		// @media (min-width menuViewPort)
+		// align-items center
+		display flex
+		flex-wrap wrap
+		justify-content center
+		width 100%
+				
+		> div
+			@media (max-width menuViewPort - 1)
+				text-align center
+				
+			@media (min-width menuViewPort)
+				flex 1 1 0
+		> img
+			height auto
+			margin-bottom 40px
+			
+			@media (max-width menuViewPort - 1)
+				display block
+				object-fit cover
+				height calc(100vh - 150px)
+				margin 0 auto 40px
+				max-width 600px
+				width 100%
+			
+			@media (min-width menuViewPort)
+				max-width 100%
+				padding-right 40px
+				
+
+	// -image-text invert
+	// ===========
+	&-image-text--invert
+		@extends .card-image-text
+		flex-direction row-reverse
+		
+		img
+			@media (min-width menuViewPort)
+				padding-left 40px
+				padding-right 0

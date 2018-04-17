@@ -1,0 +1,42 @@
+// botao
+// ============
+.btn
+	background-color darkColorTwo
+	color white
+	display inline-block
+	font italic 13px fontSecond
+	padding 8px 16px
+	font-size 14px
+	text-transform uppercase
+	transition .4s ease
+	
+	&:hover
+		background-color darken(darkColorTwo, 20)
+		
+
+// botao pequeno
+// =============
+.btn-small
+	@extends .btn
+	font-size 14px
+	padding 7px 30px 7px 22px
+	
+	&:after
+		background url(../img/arrow-white-small.png) no-repeat
+		right 20px
+		transform translate(75%, -50%)
+		
+	&:hover
+		&:after
+				transform translate(100%, -50%)
+		
+
+
+.btn-darken
+	@extends .btn
+	background-color lightColorMaster
+	color white
+	
+	&:hover
+		background-color transparent
+		color lightColorMaster

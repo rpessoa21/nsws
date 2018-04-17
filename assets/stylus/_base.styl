@@ -1,0 +1,76 @@
+*
+	box-sizing border-box
+
+html
+	height 100%
+
+// ========================
+// generic elements
+// ========================
+
+body
+	color darkColorTwo
+	font-family fontMaster
+	font-size 16px
+	-webkit-font-smoothing antialiased
+	-moz-osx-font-smoothing grayscale
+	text-rendering optimizeLegibility
+	
+	&.no-scroll
+		overflow hidden
+
+
+a
+	color inherit
+	display inline-block
+	text-decoration none
+
+
+// links para telefone
+// =====================
+a[href^="tel:"]
+	cursor default
+	
+	
+p
+	line-height 1.4
+	
+
+
+strong
+b
+	font-weight 700
+	
+em
+i
+	font-style italic
+
+
+selection(darkColorMaster, lightColorMaster)
+
+
+ol
+	counter-reset item
+	
+	li
+		display block
+		line-height 1.8
+		
+		&:before
+			content counters(item, ".") " "
+			counter-increment: item
+			
+		ol
+			margin-top 2px
+			margin-bottom 40px
+			
+			li + li
+				margin 21px 0 0
+
+
+
+// desabilitado
+// =============
+.disabled
+	cursor default
+	pointer-events none

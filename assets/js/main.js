@@ -1,0 +1,388 @@
+jQuery(document).ready(function($){
+	// =========================
+	// menu hamburguer
+	// =========================
+	try {
+		$('.hamburguer').click(function(){
+			// ALTERNA O ESTADO PARA X OU ESTADO ORIGINAL
+			$('.navigation-toggle, .menu-overlay, .menu--primary, .header--menu, .menu--social, .header--main, .header--menu---wrap').toggleClass('active');
+		});
+	} catch(e) {
+		console.log(e);
+	}
+
+	// =========================
+	// MENU MOBILE
+	// =========================
+	// DROP DOWN ESPECIFICO DE CELULAR
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		$('.menu--primary > ul > li > a').click(function(e){
+			$(this).parent().siblings().find('ul').removeClass('open-submenu');
+			if($(this).parent().find('ul').length > 0 ){
+				e.stopPropagation();
+				e.preventDefault();
+				$(this).parent().find('ul').first().toggleClass('open-submenu');
+			}
+		});
+	}
+
+	// ==================
+	// header sticky
+	// ==================
+	try {
+		var header = $('.header');
+		var stickyNavTop = header.offset().top + header.height();
+
+		$(window).scroll(function() {
+			$(window).scrollTop() > 250 ? header.addClass('sticky') : header.removeClass('sticky');
+		});
+	} catch(e) {
+		console.log(e)
+	}
+
+
+	// =========================
+	// slider fade single
+	// =========================
+	try {
+		var galleryTop = new Swiper('.card-slider--single', {
+			centeredSlides: true,
+			effect: 'fade',
+			speed: 1000,
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+
+
+	} catch(e) {
+		console.log(e)
+	}
+	
+
+	// ========================
+	// fancybox 3
+	// ========================
+	try {
+		$('[data-fancybox]').fancybox({
+			buttons : [
+				'close'
+			],
+		});
+	} catch(e) {
+		console.log(e);
+	}
+
+	// ===============
+	// acordion
+	// ===============
+	try {
+		$('dl dt').first().addClass('active');
+		$('dl dd').first().slideDown().addClass('active');
+		
+		$('dt').click(function(){
+		  $('dt').removeClass('active');
+		  $('dd').stop().slideUp().removeClass('active');
+		  if(!$(this).next().is(":visible")) {
+			$(this).next().slideDown().addClass('active');
+			$(this).addClass('active');
+		}
+	});
+	} catch(e) {
+		console.log(e)
+	}
+
+	// =========================
+    // INSTAFEED
+    // =========================
+	// if ($('#instagram')[0]) {
+	// 	var feed = new Instafeed({
+	// 		get: 'user',
+	// 		userId: 1491737471,
+	// 		accessToken: '1491737471.1677ed0.5a30682b006a4fc4847e63127bc03448',
+	// 		template: '<div class="instagram-item"><a href="{{link}}" target="_blank"><img src="{{image}}"></a></div>',
+	// 		target: 'instagram',
+	// 		limit: '10', /* Número de fotos */
+	// 		sortBy: 'most-recent',
+	// 		resolution: 'standard_resolution',
+	// 		// after: function(){
+	// 		// 	createInstagramGrid();
+	// 		// }
+	// 	});
+	// 	feed.run();
+	// }
+
+	
+
+	// ========================
+	// modal
+	// ========================
+	// try {
+	// 	$('.open-modal').click(function (e) {
+	// 		openModal = $(this).attr('href');
+
+	// 		$('.modal-overlay, ' + openModal).addClass('active');
+	// 	});
+
+	// 	$('.close-modal, .modal-overlay').click(function (e) {
+	// 		$('.modal-overlay,' + openModal).removeClass('active');
+	// 	});
+	// } catch(e) {
+	// 	console.log(e);
+	// }
+
+
+
+	// ==================
+	// mapa
+	// ==================
+	// try {
+	// 	$('.item-map--legends a').click(function(){
+	// 		// clique = $(this).attr('href');
+	// 		// $(clique).css({'display' : 'flex'});
+	// 		$(this).parent().next().css({'display' : 'flex'});
+	// 	});
+
+	// 	$('.item-map--fechar a').click(function(){
+	// 		$('.item-map--tooltip').hide();
+	// 	});
+
+	// 	$(document).keyup(function(e) {
+	// 		if (e.keyCode === 27) {
+	// 			$('.item-map--tooltip').hide();
+	// 		}
+	// 	});
+	// } catch(e) {
+	// 	console.log(e);
+	// }
+
+	// ==================
+	// send mail error
+	// ==================
+	// try {
+	// 	var hash = window.location.hash;
+	// 	console.log(hash);
+	// 	if (hash === '#sendError') {
+	// 		$('.item-return').html('<h4>Atenção!</h4><p>Você não preencheu os campos corretamente</p>').addClass('erro');
+	// 	}
+	// 	if (hash === '#sendSuccess') {
+	// 		$('.item-return').html('<p>E-mail enviado com sucesso!</p>').addClass('sucesso');
+	// 	}
+
+	// 	if (hash === '#conteudo-extra') {
+	// 		$('.item-return').html('<p>Você foi cadastrado com sucesso!</p>').addClass('sucesso');
+	// 	}
+	// } catch(e) {
+	// 	console.log(e);
+	// }
+
+
+	// =========================
+	// mapa ilustrado
+	// =========================
+	// jQuery("#map").draggable({
+	// 	containment: $('#container')
+	// });
+
+
+	// ===============
+	// load more
+	// ===============
+	// try {
+	// 	$(function () {
+	// 		$(".card-grid--imprensa > ul > li").slice(0, 4).show();
+	// 		$("#loadMore").on('click', function (e) {
+	// 			e.preventDefault();
+	// 			$(".card-grid--imprensa > ul > li:hidden").slice(0, 4).slideDown();
+	// 			if ($(".card-grid--imprensa > ul > li:hidden").length == 0) {
+	// 				$("#load").fadeOut('slow');
+	// 			}
+	// 			$('html,body').animate({
+	// 				scrollTop: $(this).offset().top
+	// 			}, 1500);
+	// 		});
+	// 	});
+	// } catch(e) {
+	// 	console.log(e);
+	// }
+
+	
+	// ===============
+	// input fields
+	// ===============
+	// try {
+	// 	$('.card-form--contato input, .card-form--contato textarea').focus(function(){
+	// 		$(this).parents('.field').addClass('focused');
+	// 	});
+
+	// 	$('.card-form--contato input, .card-form--contato textarea').blur(function(){
+	// 		var inputValue = $(this).val();
+	// 		if ( inputValue == "" ) {
+	// 			$(this).removeClass('filled');
+	// 			$(this).parents('.field').removeClass('focused');  
+	// 		} else {
+	// 			$(this).addClass('filled');
+	// 		}
+	// 	});
+	// } catch(e) {
+	// 	console.log(e)
+	// }
+
+
+	// ==========
+	// deixa video responsivo
+	// ==========
+	// try {
+	// 	$('iframe').wrap('<div class="video-container"><div class="video">');
+	// } catch(e) {
+	// 	console.log(e)
+	// }
+
+	// ==========
+	// ancora
+	// ==========
+	// try {
+	// 	$('a.anchor').click(function(e){
+	// 		$('html, body').stop().animate({
+	// 			scrollTop: $( $(this).attr('href') ).offset().top
+	// 		}, 800, 'swing');
+	// 		return false;
+	// 	});
+	// } catch(e) {
+	// 	console.log(e)
+	// }
+
+
+	// ===============
+	// tabs
+	// ===============
+	// $('.tab-content div[id^=tab-target-]:not(:first-child)').hide(); // AQUI DA FADE OUT EM TODAS AS ABAS menos na primeira
+	// $('.tab-content div').first().show();
+	// $('.tabs-list li a').first().addClass('active');
+
+	// $('.tabs-list li a').click(function(){
+	// 	$('div[id^=tab-target-]').hide(); // AQUI DA FADE OUT EM TODAS AS ABAS
+	// 	$(this.hash).fadeIn(); // AQUI EXIBE SO A ABA QUE FOI CLICADA
+	// 	$('.tabs-list li a, .tabs-list').removeClass('active'); // TIRA A CLASSE ACTIVE DE TODOS
+	// 	$(this).addClass('active'); // COLOCA A CLASSE ACTIVE PRA DEIXAR MARCADA A ABA CLICADA
+	// 	$('html, body').stop().animate({
+	// 			scrollTop: $( $(this).attr('href') ).offset().top - 200
+	// 		}, 800, 'swing');
+	// 	return false;
+	// });
+
+	// ===================
+	// tabs responsive
+	// ===================
+	// $('.tabs-open-list').click(function(){
+	// 	$('.tabs-list').addClass('active');
+	// });
+
+	// $('.tabs-back-list').click(function(){
+	// 	$('.tabs-list').removeClass('active');
+	// });
+
+
+	
+
+	// =========================
+	// mapa contato
+	// =========================
+	// try {
+	// 	if($('#item-map')[0]) {
+	// 		var image = '../img/pin.png';
+	// 		var mapOptions = {
+	// 			zoom: 17,
+	// 			center: new google.maps.LatLng(-22.9083942, -43.1740729), 
+	// 			mapTypeId: google.maps.MapTypeId.ROADMAP,
+	// 			styles: 
+	// 				[
+	// 					{
+	// 						'featureType': 'landscape.man_made',
+	// 						'stylers': [
+	// 						{ 'hue': '#0091ff' },
+	// 						{ 'saturation': -90 },
+	// 						]
+	// 					}
+	// 				],
+	// 			scrollwheel: false
+	// 		}
+	// 		var map = new google.maps.Map(document.getElementById('item-map'), mapOptions);
+	// 		var myPos = new google.maps.LatLng(-22.9083942, -43.1740729); 
+	// 		var myMarker = new google.maps.Marker({position: myPos, map: map, icon: image });
+	// 	} else {
+	// 		// 
+	// 	}
+	// } catch(e) {
+	// 	console.log(e);
+	// }
+
+
+
+
+
+ //    // monta o grid
+ //    // ========================
+ //    function createInstagramGrid(){
+ //        $('#instagram div').each(function(i){
+
+ //            if(i == 0){
+ //                $('.instagram-grid').append('<div class="card-grid grid-1">');
+ //                $('.instagram-grid .grid-1').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+ //            if(i == 1){
+ //                $('.instagram-grid').append('<div class="card-grid grid-2">');   
+ //                $('.instagram-grid .grid-2').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+ //            if(i == 2){
+ //                $('.instagram-grid').append('<div class="card-grid grid-3"></div>');
+ //                $('.instagram-grid .grid-3').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+ //            if(i == 3){
+ //                $('.instagram-grid').append('<div class="card-grid grid-4"></div>');
+ //                $('.instagram-grid .grid-4').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+
+ //            if(i == 4){
+ //                $('.instagram-grid').append('<div class="card-grid card-wrapper grid-5">');
+ //            }
+
+ //            if(i == 5){
+ //                $('.instagram-grid').append('</div>');
+ //            }
+
+ //            if(i >= 4 && i <= 7){
+ //                $('.instagram-grid .grid-5').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+
+ //            if(i == 8){
+ //                $('.instagram-grid').append('<div class="card-grid grid-6"></div>');
+ //                $('.instagram-grid .grid-6').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+ //            if(i == 9){
+ //                $('.instagram-grid').append('<div class="card-grid grid-7"></div>');
+ //                $('.instagram-grid .grid-7').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+ //            if(i == 10){
+ //                $('.instagram-grid').append('<div class="card-grid grid-8"></div>');
+ //                $('.instagram-grid .grid-8').append($(this).clone().addClass('item-'+(i+1)));
+ //            }
+
+ //        });
+ //    }
+});

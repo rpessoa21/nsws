@@ -1,0 +1,136 @@
+// modal
+// =============
+.modal
+	// backface-visibility hidden
+	background darkColorMaster
+	box-shadow 0px 0px 6px rgba(darkColorMaster, .7)
+	color white
+	height 80vh
+	left 50%
+	padding-bottom 0
+	padding-top 0
+	position fixed
+	top -250%
+	transform translate(-50%, 0)
+	transition .7s cubic
+	width 100%
+	z-index 6000
+
+	
+	@media (min-width tablet)
+		left 50%
+		max-width 640px
+		transform translate(-50%, 0)
+
+	&.active
+		top 10vh
+		z-index 13000
+	
+		@media (min-width tablet)
+			transform translate(-50%, 0%)
+		
+		
+	.container
+		margin 0 -30px 0 -10px
+		overflow auto
+		padding 34px 10px
+		position relative
+		
+		// @media (min-width tablet)
+		// 	padding 34px 60px
+		
+	.row
+		padding 0 60px
+		
+	.relative
+		overflow hidden
+
+	.close-modal
+		background lightColorMaster
+		color white
+		position absolute
+		right 0
+		top 0
+		transition .4s cubic
+		z-index 1000
+
+		// @media (min-width 1080px)
+		// 	transform translate(40px, -30px)
+
+		a
+			font-size 26px
+			padding 20px 26px
+			transition .4s ease
+			
+			&:hover
+				background-color darkColorMaster
+				
+	.overflow
+		height calc(80vh - 60px)
+		overflow auto
+
+	// especifico desse projeto
+	// ==========================
+	&#login
+		.row
+			@media (min-width tablet)
+				gutter(30px, 30px)
+			
+		.logo
+			margin-bottom 50px
+			text-align center
+			
+		.modal-title
+			font italic 700 34px fontSecond
+			margin-bottom 10px
+			margin-top 20px
+			text-align center
+			
+		.modal-text
+			margin-bottom 20px
+			text-align center
+			
+		p
+			backface-visibility hidden
+			
+		.form
+			margin-bottom 20px
+			
+			.field
+				margin-bottom 20px
+				
+			input[type="submit"]
+				background darkColorExtra
+				border-radius 6px
+				font-size 15px
+				padding 12px
+				width 100%
+				
+
+	.btn-primary
+		font-size 16px
+		font-weight 700
+		text-align center
+		width 100%
+		
+
+
+// ===================
+.modal-overlay
+	background-color rgba(white, .87)
+	height 100%
+	left 0
+	opacity 0
+	pointer-events none
+	position fixed
+	top 0
+	transition .4s cubic
+	width 100%
+	z-index 10000
+	
+	@media (min-width 1040px)
+		z-index 5000
+	
+	&.active
+		opacity 1
+		pointer-events all

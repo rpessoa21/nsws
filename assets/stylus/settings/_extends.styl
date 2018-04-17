@@ -1,0 +1,112 @@
+// imagem responsiva
+// =====================
+.img-responsive
+	height auto
+	width 100%
+
+// imagem responsiva mantendo no maximo o tamanho original
+// =======================================================
+.img-max-responsive
+	height auto
+	max-width 100%
+
+
+// alinhamento centralizado
+// ========================
+.txt-center
+	text-align center
+
+
+
+// ================
+// global extends
+// ================
+
+
+// text form
+// ==========
+.uppercase
+	text-transform uppercase
+	
+.bold
+	font-weight 700
+
+// position
+// =========
+.relative
+	position relative
+	
+.absolute
+	position absolute
+	
+.fixed
+	position fixed
+
+// display
+// ========
+.flex
+	display flex
+
+
+// alinhamento
+// ========
+.align-bottom
+	align-items baseline
+	
+.align-middle
+	align-items center
+	
+.justify-center
+	justify-content center
+	
+
+// ======================
+.effect-mais
+	a
+		img
+			backface-visibility hidden
+			transition 1s cubic
+			
+		.image
+			line-height 0
+			overflow hidden
+			position relative
+			
+			&:before
+				backface-visibility hidden
+				color white
+				content '+'
+				font-size 100px
+				font-weight 100
+				left 50%
+				opacity 0
+				position absolute
+				top 50%
+				transform translate(-50%, -50%) scale(3)
+				transition .5s cubic
+				z-index 2
+			
+			&:after
+				background-color black
+				content ''
+				height 100%
+				left 0
+				opacity 0
+				position absolute
+				top 0
+				transition .4s ease .4s
+				width 100%
+			
+		&:hover
+			img
+				transform scale(1.1)
+				
+
+			.image
+				&:before
+					opacity 1
+					transform translate(-50%, -50%) scale(1)
+					
+				&:after
+					opacity .4
+			

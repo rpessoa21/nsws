@@ -1,0 +1,34 @@
+// instagram instafeed
+// =============
+#instagram
+	@extends .flex
+	flex-flow row wrap
+	
+	.instagram-item
+		flex-basis 100%
+		line-height 0
+		padding 8px
+		
+		@media (max-width tablet - 1)
+			&:nth-of-type(n+3)
+				display none
+		
+		@media (max-width desktopSmall - 1)
+			&:nth-of-type(n+4)
+				display none
+				
+		@media (min-width oldMobile)
+			flex-basis 50%
+		
+		@media (min-width tablet)
+			flex-basis 33%
+		
+		@media (min-width desktopSmall)
+			flex-basis 20%
+
+	img
+		width 100%
+		
+		@media (min-width tablet)
+			height 135px
+			object-fit cover

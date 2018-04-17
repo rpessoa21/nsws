@@ -1,0 +1,194 @@
+// ========================
+// FONTS
+// ========================
+
+font-face($family, $file, $weight)
+	$font-url = '../fonts/'
+
+	@font-face
+		font-family $family
+		font-weight $weight
+		font-style normal
+		src url($font-url + $file + '.eot')
+		src url($font-url + $file + '.eot?#iefix') format('embedded-opentype'), url($font-url + $file + '.woff') format('woff'), url($font-url + $file + '.otf') format('opentype'), url($font-url + $file + '.svg#' + $file) format('svg')
+
+
+// ========================
+// DEFINE UMA DISTANCIA ENTRE AS COLUNAS
+// ========================
+gutter(pl, pr)
+	> *
+		padding-left pl
+		padding-right pr
+	
+		&:first-child
+			padding-left 0
+			
+		&:last-child
+			padding-right 0
+			
+gutter-col(pl, pr)
+	> div[class*="col-"]
+		padding-left pl
+		padding-right pr
+	
+		&:first-child
+			padding-left 0
+			
+		&:last-child
+			padding-right 0
+
+gutter-li(pl, pr)
+	> li
+		padding-left pl
+		padding-right pr
+	
+		&:first-child
+			padding-left 0
+			
+		&:last-child
+			padding-right 0
+
+
+	
+// ========================
+// DEFINE TAMANHO DO ELEMENTO POSICIONANTO AO CENTRO
+// ========================				
+custom-size(mw)
+	margin-left auto
+	margin-right auto
+	max-width mw
+
+
+// =================
+// lines
+// =================
+
+// linha abaixo do elemento
+// ===============
+line-bottom(color)
+	&:after
+		background-color color
+		content ''
+		display block
+		margin 8px 0 21px
+		height 1px
+		width 180px
+		
+// linha centralizada abaixo do elemento
+// ===============
+line-bottom--center(color, height)
+	&:after
+		background-color color
+		content ''
+		display block
+		margin 0 auto
+		height height
+		width 180px
+		
+		
+// linha acima do elemento
+// ===================
+line-top(color)
+	&:before
+		background-color color
+		content ''
+		display block
+		margin 10px 0 20px
+		height 1px
+		width 180px
+
+
+// linha centralizada acima do elemento
+// ===================
+line-top--center(color)
+	&:before
+		background-color color
+		content ''
+		display block
+		margin 10px auto 20px
+		height 1px
+		width 180px
+		
+
+
+			
+// ========================
+// MUDA A COR DO TEXTO QUANDO SELECIONA
+// ========================
+selection(backgroundColor, colorFont)
+	::selection
+		background backgroundColor
+		color colorFont
+	
+	::-moz-selection
+		background backgroundColor
+		color colorFont
+
+
+
+
+
+
+
+
+
+		
+
+// Hamburger Settings
+// ------------------------------------------------------------------------
+$hamburger-settings = ();
+
+
+
+// Hamburger Generator
+// ------------------------------------------------------------------------
+hamburger-generator($width = 32px, $height = 3px, $gutter = 5px, $color = #000,
+										$border-radius = 0, $duration = .3s,
+										$timing-function = ease)
+	// Set variables
+	push($hamburger-settings, $height, $gutter)
+
+	position: relative
+	margin-top: $height + $gutter
+	margin-bottom: $height + $gutter
+
+	&,
+	&:before,
+	&:after
+		display: block
+		width: $width
+		height: $height
+		transition: background-color $duration $timing-function,
+								transform $duration $timing-function
+
+		if ($border-radius != 0)
+			border-radius: $border-radius
+
+		background-color: $color
+
+	&:before,
+	&:after
+		position: absolute
+		content: ""
+
+	&:before
+		top: -($height + $gutter)
+
+	&:after
+		top: $height + $gutter
+
+
+
+// Hamburger Animation
+// ------------------------------------------------------------------------
+hamburger-animation()
+	$height = $hamburger-settings[0]
+	$gutter = $hamburger-settings[1]
+	background-color: transparent
+
+	&:before
+		transform: translateY($gutter + $height) rotate(45deg)
+
+	&:after
+		transform: translateY(-($gutter + $height)) rotate(-45deg)

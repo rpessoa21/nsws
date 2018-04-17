@@ -1,0 +1,29 @@
+// ====================
+// section
+// ====================
+section
+	padding 40px 0
+	
+	// espacamento
+	// =========
+	&.gap
+		padding 50px 0
+		
+	&.no-gap
+		padding 0
+	
+	// fundo
+	// ========
+	&.gray
+		background-color #f5f5f5
+		
+	// toda section que terminar com --light fica com fundo cinza
+	// ==============
+	&[class$="--light"]
+		@extends section.gray
+	
+
+
+	// ====================
+	// ====================
+	

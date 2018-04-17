@@ -1,0 +1,103 @@
+// botao ver opcoes no responsive
+// ================
+.tabs-open-list
+.tabs-back-list
+	margin-bottom 60px
+	text-align center
+	
+	a
+		border 1px darkColorMaster solid
+		font-weight 700
+		padding 18px 30px
+
+	@media (min-width tablet)
+		display none
+
+.tabs-back-list
+	margin-bottom 20px
+
+
+.tabs-list
+	// responsive mode
+	// ==============
+	@media (max-width tablet - 1)
+		background-color white
+		left 0
+		overflow hidden
+		position fixed
+		top 0
+		transform translateY(-100%)
+		transition .4s ease
+		width 100%
+		z-index 10
+		
+		&.active
+			transform translateY(90px)
+	
+	@media (min-width 768px)
+		padding-right 130px
+		
+
+	> ul
+		display flex
+		flex-direction column
+		
+		// responsive mode
+		// ==============
+		@media (max-width tablet - 1)
+			overflow auto
+			height calc(90vh - 90px)
+			width calc(100% + 20px)
+		
+		@media (min-width 992px)
+			flex-direction row
+			
+		.tabs--columns &
+			flex-direction column
+			
+		> li
+			+ li
+				margin-left 0
+				margin-top 10px
+				
+			a
+				@extends .txt-center, .relative
+				border 1px lightColorMaster solid
+				display block
+				line-height 1.6
+				padding 14px 30px
+				position relative
+				transition .4s ease
+				
+				&:after
+					@media (min-width tablet)
+						background-color darkColorMaster
+						content ''
+						height 1px
+						position absolute
+						left 100%
+						top 50%
+						transform translateX(20px)
+						transition .4s ease
+						width 0
+
+				&.active
+				&:hover
+					background-color lightColorMaster
+					color white
+					
+					&:after
+						width 60px
+	
+
+.tab-content
+	position relative
+	
+		
+div[id^='tab-target-']
+	display none
+
+	
+// ============
+.tab-title
+	margin-bottom 20px
