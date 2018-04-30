@@ -10,103 +10,49 @@ block vars
 
 block content
 	main.main
-		section.slider--single
-			.container
-				.swiper-container.card-slider--single
-					.swiper-wrapper
-						figure.swiper-slide
-							.slider-image
-								img(src="img/slide-01.jpg", alt="")
+		section.banner--video
+			.item-banner--fullscreen(style="background-image: url(" + baseHref + "img/_content/angola.jpg);")
+				.item-banner--fullscreen---primary
+					h2 Temos expertise em soluções para internet
+		
+				.item-banner--fullscreen---second
+					p Somos uma equipe com base em Angola
 
-						figure.swiper-slide
-							.slider-image
-								img(src="img/slide-02.jpg", alt="")
-
-						figure.swiper-slide
-							.slider-image
-								img(src="img/slide-03.jpg", alt="")
-
-
-		section.flex-columns
-			.container
-				.item-flex-columns--row
-					.item-flex-columns--col
-						p O escritório BRUNO CALFAT ADVOGADOS é especializado na advocacia contenciosa e pré-contenciosa, em questões estratégicas de direito privado e público. Na sua esfera de causas, representa grandes empresas, associações de servidores públicos, pessoas físicas e jurídicas.
-
-					.item-flex-columns--col
-						p O escritório BRUNO CALFAT ADVOGADOS é especializado na advocacia contenciosa e pré-contenciosa, em questões estratégicas de direito privado e público. Na sua esfera de causas, representa grandes empresas, associações de servidores públicos, pessoas físicas e jurídicas.
-
-
-		section.grid
-			header.item-header-section
-				h2 Publicações
-
+		section.grid--alternate
 			.container
 				.row
 					.col-xs-12
-						.card-grid--three
-							ul
-								li
-									.item--base---main
-										a(href=baseHref + "noticias-e-publicacoes")
-											.item-grid--base---image
-												img(src=baseHref + "img/_content/blog/1.jpg", alt="")
+						.item-title
+							h2 O que nós fazemos
 
-											.text
-												.item-grid--base---title
-													p PPPs: obrigações só de um lado?
+				.card-grid--alternate
+					.row
+						.col-xs-12
+							p Nós temos <b>soluções especializadas</b> em informática para empresas, cooperativas, profissionais liberais.
+						
+							p Contamos com uma <b>equipe altamente qualificada</b>, capaz de oferecer serviço de <b>ótima qualidade</b> por um <b>valor justo</b>.
 
-												.item-grid--base---category
-													p Jornal Valor Econômico
+		section.grid--portfolio
+			.container
+				.row
+					.col-xs-12
+						.item-title
+							h2 Últimos trabalhos em web design
 
-												.item-grid--base---text
-													p As Parcerias Público-Privadas (PPPs) constituem mais uma forma de realização de políticas públicas para a consecução e tutela da dignidade da pessoa humana, de direitos fundamentais e sociais, garantidos pela...
+				.card-grid--portfolio
+					ul
+						li(style="position: relative")
+							.item-grid--portfolio---text
+								.item-grid--portfolio---text----title
+									p Coop Cae
+									
+								.item-grid--portfolio---text----description
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur qui est quo consequuntur, esse iure tempora delectus alias error vel hic nemo repudiandae quae, unde. Dignissimos animi, nemo facilis.
 
-											
-										.item-grid--base---button
-											a(href=baseHref + "") Leia mais
-
-
-								li
-									.item--base---main
-										a(href=baseHref + "noticias-e-publicacoes")
-											.item-grid--base---image
-												img(src=baseHref + "img/_content/blog/2.jpg", alt="")
-
-											.text
-												.item-grid--base---title
-													p Desestímulo a projetos sustentáveis
-
-												.item-grid--base---category
-													p Jornal Valor Econômico
-
-												.item-grid--base---text
-													p As Parcerias Público-Privadas (PPPs) constituem mais uma forma de realização de políticas públicas para a consecução e tutela da dignidade da pessoa humana, de direitos fundamentais e sociais, garantidos pela...
-
-											
-										.item-grid--base---button
-											a(href=baseHref + "") Leia mais
-
-
-								li
-									.item--base---main
-										a(href=baseHref + "noticias-e-publicacoes")
-											.item-grid--base---image
-												img(src=baseHref + "img/_content/blog/3.jpg", alt="")
-
-											.text
-												.item-grid--base---title
-													p Avanço ou retrocesso
-
-												.item-grid--base---category
-													p Jornal Valor Econômico
-
-												.item-grid--base---text
-													p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa provident veritatis nemo consectetur aliquid vel eum amet minus quod unde omnis nisi, cupiditate itaque odio perferendis velit cumque recusandae. Consectetur?
-
-											
-										.item-grid--base---button
-											a(href=baseHref + "") Leia mais
-
-
-								
+							.item-grid--portfolio---image
+								.item-grid--portfolio---screenshot
+									img(src=baseHref + "img/_content/screenshot/coop/mobile.png", alt="")
+								.item-grid--portfolio---screenshot
+									img(src=baseHref + "img/_content/screenshot/coop/tablet.png", alt="")
+								.item-grid--portfolio---screenshot
+									img(src=baseHref + "img/_content/screenshot/coop/notebook.png", alt="")

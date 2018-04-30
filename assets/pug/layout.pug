@@ -10,18 +10,18 @@ html(lang="pt-BR")
 		meta(name="robots", content="index,follow")
 		//- meta(name='theme-color', content='#ec1c23')
 		block title
-		title Bruno Calfat &mdash; #{titlePage}
+		title NSWS Solutions &mdash; #{titlePage}
 
-		meta(property='og:title', content='Bruno Calfat Advogados')
-		meta(property='og:image', content='http://bcalfat.adv.br/images/marca-bruno-calfat-cinza.png')
-		meta(property='og:url', content='http://bcalfat.adv.br')
-		meta(property='og:description', content='O escritório de advocacia Bruno Calfat Advogados é especializado nas áreas de arbitragem, direito civil, contratos, família, empresarial e societário, administrativo e regulatório, constitucional, securitário, imobiliário, ambiental, internacional e eleitoral')
-		meta(name='google-site-verification', content='j5_Uudowl4ZC3Ya-yHh0bOeO4gsDZQ3EZwzkrhZ8m_o')
+		meta(property='og:title', content='NSWS Solutions')
+		meta(property='og:image', content='http://nswsolution.com/img/logo.png')
+		meta(property='og:url', content='http://nswsolution.com')
+		meta(property='og:description', content='')
+		//- meta(name='google-site-verification', content='j5_Uudowl4ZC3Ya-yHh0bOeO4gsDZQ3EZwzkrhZ8m_o')
 		meta(name='twitter:card', content='summary')
-		meta(name='twitter:url', content='http://bcalfat.adv.br')
-		meta(name='twitter:title', content='Bruno Calfat Advogados')
-		meta(name='twitter:description', content='O escritório de advocacia Bruno Calfat Advogados é especializado nas áreas de arbitragem, direito civil, contratos, família, empresarial e societário, administrativo e regulatório, constitucional, securitário, imobiliário, ambiental, internacional e eleitoral')
-		meta(name='twitter:image', content='http://bcalfat.adv.br/images/marca-bruno-calfat-cinza.png')
+		meta(name='twitter:url', content='http://nswsolution.com')
+		meta(name='twitter:title', content='NSWS Solutions')
+		meta(name='twitter:description', content='')
+		meta(name='twitter:image', content='http://nswsolution.com/img/logo.png')
 		link(rel='publisher', href='https://plus.google.com/b/106518998222691382018/106518998222691382018')
 
 
@@ -29,7 +29,7 @@ html(lang="pt-BR")
 
 		<!--[if lte IE 9]>
 		<link type="text/css" rel="stylesheet" href="css/ie.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<![endif]-->
 
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", rel="stylesheet")
@@ -49,28 +49,13 @@ html(lang="pt-BR")
 			.header--wrap
 				.header--logo
 					a(href=baseHref + "")
-						img(src=baseHref + "img/logo.png", alt="")
+						img(src=baseHref + "img/logo.svg", alt="")
 
 				.header--menu---wrap
 					nav(role="navigation", itemscope="itemscope", itemtype="http://www.schema.org/SiteNavigationElement").menu--primary
 						ul
 							li(class=(bodyClass === 'home')? "current-menu-item" : "")
 								a(href=baseHref + '', itemprop="url") Home
-
-							li(class=(bodyClass === 'o-escritorio')? "current-menu-item" : "")
-								a(href=baseHref + 'o-escritorio', itemprop="url") O Escritório
-
-							li(class=(bodyClass === 'equipe')? "current-menu-item" : "")
-								a(href=baseHref + 'equipe', itemprop="url") Equipe
-
-							li(class=(bodyClass === 'areas-de-atuacao')? "current-menu-item" : "")
-								a(href=baseHref + 'areas-de-atuacao', itemprop="url") Áreas de Atuação
-
-							li(class=(bodyClass === 'noticias-e-publicacoes')? "current-menu-item" : "")
-								a(href=baseHref + 'noticias-e-publicacoes', itemprop="url") Notícias e Publicações
-
-							li(class=(bodyClass === 'contato')? "current-menu-item" : "")
-								a(href=baseHref + 'contato', itemprop="url") Contato
 
 					nav.menu--language
 						ul
@@ -98,7 +83,7 @@ html(lang="pt-BR")
 		block content
 
 
-		footer.footer(role="contentinfo", itemscope itemtype="http://schema.org/WPFooter")
+		//- footer.footer(role="contentinfo", itemscope itemtype="http://schema.org/WPFooter")
 			//- .back-to-top
 			
 
