@@ -12,7 +12,7 @@ Insira o nome do tema do WP na var theme
 
 var dev = 'front';
 
-var theme = 'bruno-calfat';
+var theme = '';
 
 if(dev == 'back') {
 
@@ -107,7 +107,7 @@ gulp.task('templates', function() {
     return gulp.src(['./assets/pug/**/*.pug', '!./assets/pug/**/layout.pug', '!./assets/pug/**/_*.pug'])
         .pipe(pug({
             data: {
-                baseHref: '/',
+                baseHref: '',
                 // baseHref: 'http://mgstudio.com.br/clientes_mg/' + theme + '/static/',
             },
             pretty: true
