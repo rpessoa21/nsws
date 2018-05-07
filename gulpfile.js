@@ -107,7 +107,7 @@ gulp.task('templates', function() {
     return gulp.src(['./assets/pug/**/*.pug', '!./assets/pug/**/layout.pug', '!./assets/pug/**/_*.pug'])
         .pipe(pug({
             data: {
-                baseHref: '',
+                baseHref: 'https://github.com/rpessoa21/nsws/blob/master/static/',
                 // baseHref: 'http://mgstudio.com.br/clientes_mg/' + theme + '/static/',
             },
             pretty: true
