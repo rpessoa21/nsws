@@ -39,20 +39,27 @@ block content
 						.item-title
 							h2 Últimos trabalhos em web design
 
-				.card-grid--portfolio
-					ul
-						li(style="position: relative")
-							.item-grid--portfolio---text
-								.item-grid--portfolio---text----title
-									p Coop Cae
-									
-								.item-grid--portfolio---text----description
-									p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur qui est quo consequuntur, esse iure tempora delectus alias error vel hic nemo repudiandae quae, unde. Dignissimos animi, nemo facilis.
+				.row(style="align-items: center;")
+					.col-xs-12.col-sm-6
+						.item-grid--portfolio---text
+							.item-grid--portfolio---text----title
+								p Coop Cae
+								
+							.item-grid--portfolio---text----description
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur qui est quo consequuntur, esse iure tempora delectus alias error vel hic nemo repudiandae quae, unde. Dignissimos animi, nemo facilis.
 
-							.item-grid--portfolio---image
-								.item-grid--portfolio---screenshot
-									img(src=baseHref + "img/_content/screenshot/coop/mobile.png", alt="")
-								.item-grid--portfolio---screenshot
-									img(src=baseHref + "img/_content/screenshot/coop/tablet.png", alt="")
-								.item-grid--portfolio---screenshot
-									img(src=baseHref + "img/_content/screenshot/coop/notebook.png", alt="")
+					.col-xs-12.col-sm-6
+						.card-grid--portfolio
+							ul
+								li
+									.item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----mobile
+												img(src=baseHref + "img/_content/screenshot/coop/mobile.png", alt="")
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----tablet
+												img(src=baseHref + "img/_content/screenshot/coop/tablet.png", alt="")
+
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----notebook
+												img(src=baseHref + "img/_content/screenshot/coop/notebook.png", alt="")

@@ -43,13 +43,41 @@
 // ====================
 
 .item-grid--portfolio---image
+	align-items baseline
 	display flex
-	position absolute
-	right 0
+	width 100%
+	// position absolute
+	// right 0
 
+.item-grid--portfolio---screenshot
+	img
+		@extends .img-max-responsive
+		
+	> div
+		position relative
 
+.item-grid--portfolio---screenshot----mobile
+	transform translateY(20px)
+	z-index 3
+
+.item-grid--portfolio---screenshot----tablet
+	transform translate(-20px, 10px)
+	z-index 2
+	
+.item-grid--portfolio---screenshot----notebook
+	transform translate(-60px, -14px)
+	z-index 1
 
 
 
 // ====================
 // ====================
+
+.item-grid--portfolio---text
+	background-color #e1caca
+	padding 60px 80px
+
+.item-grid--portfolio---text----title
+	font 60px fontSecond
+
+
