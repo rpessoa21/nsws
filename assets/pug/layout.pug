@@ -34,7 +34,7 @@ html(lang="pt-BR")
 
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", rel="stylesheet")
 		
-		link(type='text/css', rel='stylesheet', href=baseHref + 'css/style.css')
+		link(type='text/css', rel='stylesheet', href='css/style.css')
 
 	block vars
 	body(itemscope itemtype="http://schema.org/WebPage", class= bodyClass)
@@ -49,7 +49,7 @@ html(lang="pt-BR")
 			.header--wrap
 				.header--logo
 					a(href=baseHref + "")
-						img(src=baseHref + "img/logo.svg", alt="")
+						img(src="img/logo.svg", alt="")
 
 				.header--menu---wrap
 					nav(role="navigation", itemscope="itemscope", itemtype="http://www.schema.org/SiteNavigationElement").menu--primary
@@ -60,10 +60,10 @@ html(lang="pt-BR")
 					nav.menu--language
 						ul
 							li(class=(lang === 'pt')? "current-menu-item" : "")
-								a(href="#") PT
+								a(href="#").pt PT
 
 							li(class=(lang === 'en')? "current-menu-item" : "")
-								a(href="#") EN
+								a(href="#").en EN
 
 
 
@@ -102,7 +102,7 @@ html(lang="pt-BR")
 			//- script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
 			
 
-			script(src=baseHref +"js/main.min.js")
+			script(src="js/main.min.js")
 
 
 			

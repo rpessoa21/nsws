@@ -81,15 +81,21 @@
 		
 		li
 			+ li
-				&:before
-					content '|'
-					margin 0 7px 0 4px
-					
-			&.current-menu-item
-				font-weight 700
-					
+				margin-left 10px
+				
 			a
-				letter-spacing 4px
+				background-image url(../img/flags.png)
+				background-repeat no-repeat
+				height 17px
+				overflow hidden
+				text-indent -9999px
+				width 30px
+				
+				&.pt
+					background-position 0 0
+					
+				&.en
+					background-position -40px 0
 
 
 
