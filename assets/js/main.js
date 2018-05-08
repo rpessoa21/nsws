@@ -102,6 +102,20 @@ jQuery(document).ready(function($){
 	}
 
 	// =========================
+	// navegacao por ancora
+	// =========================
+	$('.item-banner--fullscreen---downbutton a').click(function(e){
+		$('html, body').animate({scrollTop : $(this.hash).offset().top - 80}, 900);
+		e.preventDefault();
+	});
+
+
+	// =========================
+	// coloca o id na proxima div abaixo do slider da home
+	// =========================
+	$('.home main section:nth-of-type(2)').attr('id', 'under-the-fold');
+
+	// =========================
     // INSTAFEED
     // =========================
 	// if ($('#instagram')[0]) {
