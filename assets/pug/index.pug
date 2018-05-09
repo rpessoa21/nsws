@@ -42,7 +42,7 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.item-title
+						.item-section--title
 							h2 Últimos trabalhos em web design
 
 				.row(style="align-items: center;")
@@ -53,6 +53,8 @@ block content
 								
 							.item-grid--portfolio---text----description
 								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi tenetur qui est quo consequuntur, esse iure tempora delectus alias error vel hic nemo repudiandae quae, unde. Dignissimos animi, nemo facilis.
+
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quod, nobis. Ratione iusto id autem, repellat dolor optio mollitia error. Quam eligendi tempore quaerat, modi magnam repellendus, perspiciatis quis molestiae.
 
 					.col-xs-12.col-sm-6
 						.card-grid--portfolio
@@ -75,7 +77,7 @@ block content
 			.container
 				.row
 					.col-xs-12
-						.item-title
+						.item-section--title
 							h2 Serviços
 
 				.row
@@ -88,7 +90,8 @@ block content
 											p Network
 											
 										.item-grid--service-list---icon
-											svg(viewBox="0 0 512 512")
+											img(src=baseHref + "img/_content/icons/010-community.png", alt="")
+											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
 										.item-grid--service-list---description
@@ -100,10 +103,11 @@ block content
 								li
 									.item-grid--service-list---item
 										.item-grid--service-list---title
-											p Network
+											p Software
 											
 										.item-grid--service-list---icon
-											svg(viewBox="0 0 512 512")
+											img(src=baseHref + "img/_content/icons/005-cloud-backup-up-arrow.png", alt="")
+											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
 										.item-grid--service-list---description
@@ -115,10 +119,11 @@ block content
 								li
 									.item-grid--service-list---item
 										.item-grid--service-list---title
-											p Network
+											p Web design
 											
 										.item-grid--service-list---icon
-											svg(viewBox="0 0 512 512")
+											img(src=baseHref + "img/_content/icons/003-responsive-symbol-with-a-widescreen-monitor-a-cellphone-and-a-tablet.png", alt="")
+											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
 										.item-grid--service-list---description
@@ -130,10 +135,11 @@ block content
 								li
 									.item-grid--service-list---item
 										.item-grid--service-list---title
-											p Network
+											p Segurança
 											
 										.item-grid--service-list---icon
-											svg(viewBox="0 0 512 512")
+											img(src=baseHref + "img/_content/icons/008-shield.png", alt="")
+											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
 										.item-grid--service-list---description
@@ -142,9 +148,14 @@ block content
 											p Manutenção
 
 
-		section.banner
-			.container
-				.row
-					.col-xs-12
-						.item-title
-							h2 Contato
+		section.banner-squares--left-top
+			.item-banner-squares--banner(style="background-image: url("+baseHref+"img/coffee.jpg)")
+				.item-section--title
+					h2 Contacto
+				
+				.item-banner-squares--text
+					p +244 925 934 090
+					p +244 923 739 775
+
+					p
+						a(href="mailto:info@nswsolution.com") info@nswsolution.com
