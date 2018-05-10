@@ -34,7 +34,7 @@ html(lang="pt-BR")
 
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", rel="stylesheet")
 		
-		link(type='text/css', rel='stylesheet', href='css/style.css')
+		link(type='text/css', rel='stylesheet', href=baseHref + 'css/style.css')
 
 	block vars
 	body(itemscope itemtype="http://schema.org/WebPage", class= bodyClass)
@@ -61,6 +61,12 @@ html(lang="pt-BR")
 						ul
 							li(class=(bodyClass === 'home')? "current-menu-item" : "")
 								a(href=baseHref + '', itemprop="url") Home
+
+							li(class=(bodyClass === 'about-us')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Sobre Nós
+
+							li(class=(bodyClass === 'home')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Projetos
 
 					nav.menu--language
 						ul
@@ -107,7 +113,7 @@ html(lang="pt-BR")
 			//- script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
 			
 
-			script(src="js/main.min.js")
+			script(src=baseHref + "js/main.min.js")
 
 
 			
