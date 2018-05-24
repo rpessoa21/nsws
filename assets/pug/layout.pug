@@ -27,10 +27,10 @@ html(lang="pt-BR")
 
 		link(rel='icon', type='image/png', href=baseHref + 'img/favicon.ico')
 
-		<!--[if lte IE 9]>
-		<link type="text/css" rel="stylesheet" href="css/ie.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<![endif]-->
+		// [if lte IE 9] 
+		link(type="text/css" rel="stylesheet" href=baseHref + "css/ie.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		// [endif] 
 
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", rel="stylesheet")
 		
@@ -61,6 +61,18 @@ html(lang="pt-BR")
 						ul
 							li(class=(bodyClass === 'home')? "current-menu-item" : "")
 								a(href=baseHref + '', itemprop="url") Home
+
+							li(class=(bodyClass === 'quem-somos')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Quem somos
+
+							li(class=(bodyClass === 'servicos')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Serviços
+
+							li(class=(bodyClass === 'portfolio')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Portfolio
+
+							li(class=(bodyClass === 'contacto')? "current-menu-item" : "")
+								a(href=baseHref + '', itemprop="url") Contacto
 
 					nav.menu--language
 						ul

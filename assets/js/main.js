@@ -11,6 +11,11 @@ jQuery(document).ready(function($){
 		console.log(e);
 	}
 
+
+
+
+
+
 	// =========================
 	// MENU MOBILE
 	// =========================
@@ -26,6 +31,10 @@ jQuery(document).ready(function($){
 		});
 	}
 
+
+
+
+
 	// ==================
 	// header sticky
 	// ==================
@@ -39,6 +48,10 @@ jQuery(document).ready(function($){
 	} catch(e) {
 		console.log(e)
 	}
+
+
+
+
 
 
 	// =========================
@@ -69,6 +82,9 @@ jQuery(document).ready(function($){
 	}
 	
 
+
+
+
 	// ========================
 	// fancybox 3
 	// ========================
@@ -81,6 +97,10 @@ jQuery(document).ready(function($){
 	} catch(e) {
 		console.log(e);
 	}
+
+
+
+
 
 	// ===============
 	// acordion
@@ -101,6 +121,10 @@ jQuery(document).ready(function($){
 		console.log(e)
 	}
 
+
+
+
+
 	// =========================
 	// navegacao por ancora
 	// =========================
@@ -114,6 +138,30 @@ jQuery(document).ready(function($){
 	// coloca o id na proxima div abaixo do slider da home
 	// =========================
 	$('.home main section:nth-of-type(2)').attr('id', 'under-the-fold');
+
+
+
+
+
+	// =========================
+	// EFEITO PARALLAX DOS OBJETOS
+	// =========================
+	
+	$(window).scroll(function(e){
+		parallax();
+	});
+	function parallax(){
+		var scrolled = $(window).scrollTop();
+		$('.item-parallax-1').css('transform', 'translateY('+ -(scrolled*0.08)+'px)'); // MAIS LENTO
+		$('.item-parallax-2').css('transform', 'translateY('+ -(scrolled*0.15)+'px)');
+		$('.item-parallax-3').css('transform', 'translateY('+ -(scrolled*0.2)+'px)');
+		$('.item-parallax-4').css('transform', 'translateY('+ -(scrolled*0.3)+'px)'); // MAIS RÃPIDO
+	}
+
+
+
+
+
 
 	// =========================
     // INSTAFEED

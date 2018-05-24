@@ -11,7 +11,7 @@ block vars
 block content
 	main.main
 		section.banner--video
-			.item-banner--fullscreen(style="background-image: url(" + baseHref + "img/_content/angola.jpg);")
+			.item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
 				.item-banner--fullscreen---primary
 					h2 Temos expertise em soluções para internet
 		
@@ -32,6 +32,8 @@ block content
 							h2 O que nós fazemos
 
 				.card-grid--alternate
+					.item-parallax-1
+					.item-parallax-2
 					.row
 						.col-xs-12
 							p Nós temos <b>soluções especializadas</b> em informática para empresas, cooperativas, profissionais liberais.
@@ -63,14 +65,14 @@ block content
 									.item-grid--portfolio---image
 										.item-grid--portfolio---screenshot
 											.item-grid--portfolio---screenshot----mobile
-												img(src=baseHref + "img/_content/screenshot/coop/mobile.png", alt="")
+												img(src=imgHref + "img/_content/screenshot/coop/mobile.png", alt="")
 										.item-grid--portfolio---screenshot
 											.item-grid--portfolio---screenshot----tablet
-												img(src=baseHref + "img/_content/screenshot/coop/tablet.png", alt="")
+												img(src=imgHref + "img/_content/screenshot/coop/tablet.png", alt="")
 
 										.item-grid--portfolio---screenshot
 											.item-grid--portfolio---screenshot----notebook
-												img(src=baseHref + "img/_content/screenshot/coop/notebook.png", alt="")
+												img(src=imgHref + "img/_content/screenshot/coop/notebook.png", alt="")
 
 
 		section
@@ -90,7 +92,7 @@ block content
 											p Network
 											
 										.item-grid--service-list---icon
-											img(src=baseHref + "img/_content/icons/010-community.png", alt="")
+											img(src=imgHref + "img/_content/icons/010-community.png", alt="")
 											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
@@ -106,7 +108,7 @@ block content
 											p Software
 											
 										.item-grid--service-list---icon
-											img(src=baseHref + "img/_content/icons/005-cloud-backup-up-arrow.png", alt="")
+											img(src=imgHref + "img/_content/icons/005-cloud-backup-up-arrow.png", alt="")
 											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
@@ -122,7 +124,7 @@ block content
 											p Web design
 											
 										.item-grid--service-list---icon
-											img(src=baseHref + "img/_content/icons/003-responsive-symbol-with-a-widescreen-monitor-a-cellphone-and-a-tablet.png", alt="")
+											img(src=imgHref + "img/_content/icons/003-responsive-symbol-with-a-widescreen-monitor-a-cellphone-and-a-tablet.png", alt="")
 											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
@@ -138,7 +140,7 @@ block content
 											p Segurança
 											
 										.item-grid--service-list---icon
-											img(src=baseHref + "img/_content/icons/008-shield.png", alt="")
+											img(src=imgHref + "img/_content/icons/008-shield.png", alt="")
 											//- svg(viewBox="0 0 512 512")
 												use(xlink:href="img/_content/icons/010-community.svg#Layer_1", alt="")
 
@@ -149,7 +151,7 @@ block content
 
 
 		section.banner-squares--left-top
-			.item-banner-squares--banner(style="background-image: url("+baseHref+"img/coffee.jpg)")
+			.item-banner-squares--banner(style="background-image: url("+imgHref+"img/coffee.jpg)")
 				.item-section--title
 					h2 Contacto
 				
