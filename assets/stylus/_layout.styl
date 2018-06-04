@@ -1,6 +1,7 @@
 // ===========
 // header
 // ===========
+
 .header
 	backface-visibility hidden
 	position fixed
@@ -34,13 +35,15 @@
 
 
 
+// header wrap
+// ======================
 
-// =================================
 .header--wrap
 	align-items center
 	display flex
 	height 120px
 	justify-content space-between
+	overflow hidden
 	position relative
 	custom-size(siteWidth)
 
@@ -52,6 +55,10 @@
 			padding 0 40px
 
 
+
+
+// header logo
+// =============
 
 .header--logo
 	.sticky &
@@ -84,8 +91,24 @@
 
 
 
+// header hamburguer
+// ==============
 
-// =================================
+.header--hamburguer
+	position absolute
+	right 16px
+	top 40px
+	
+	header.sticky &
+		display none
+
+
+
+
+
+// header menu wrap
+// ==================
+
 .header--menu---wrap
 	@media (max-width menuViewPort - 1)
 		position absolute

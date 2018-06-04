@@ -3,32 +3,10 @@
 // ==============================
 
 .hamburguer
-	display none
-	
-	@media (max-width menuViewPort - 1)
-		background-color darkColorTwo
-		// border-radius 100%
-		cursor pointer
-		display block
-		height 50px
-		position fixed
-		right 22px
-		top 35px
-		width 50px
-		z-index 3000
-		
-	span.label
-		font-size 12px
-		letter-spacing 2px
-		margin-left 20px
-		margin-top -2px
-	
-		@media (max-width tablet - 1)
-			display none
-
+	cursor pointer
 
 .menu-icon
-	hamburger-generator(29px, 2px, 4px, white, $timing-function: ease)
+	hamburger-generator(29px, 3px, 4px, white, $timing-function: ease)
 	
 
 .navigation-toggle

@@ -1,21 +1,24 @@
 extends ./layout.pug
 
 block title
-	- var titlePage = 'Home'
+	- var titlePage = 'Home';
 
 block vars
-	- var bodyClass = 'home'
-	- var lang = 'pt'
+	- var bodyClass = 'home';
+	- var lang = 'pt';
 
 
 block content
 	main.main
 		section.banner--video
-			.item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
-				.item-banner--fullscreen---primary
+			video(autoplay, width="100%", muted, loop)
+				source(src=baseHref + "videos/luanda.mp4" type="video/mp4")
+					
+			//- .item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
+				//- .item-banner--fullscreen---primary
 					h2 Temos expertise em soluções para internet
 		
-				.item-banner--fullscreen---second
+				//- .item-banner--fullscreen---second
 					p Somos uma equipe com base em Angola
 
 				.item-banner--fullscreen---downbutton

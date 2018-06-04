@@ -3,8 +3,12 @@
 	
 	header:not(.sticky) &
 		@media (min-width menuViewPort)
-			transform translateY(14px)
-		
+			transition .7s cubic
+			transform translateX(100%)
+			
+			&.active
+				transform translateX(-60px)
+
 	
 	@media (min-width menuViewPort)
 		display inline-block
