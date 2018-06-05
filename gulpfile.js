@@ -108,6 +108,7 @@ gulp.task('templates', function() {
         .pipe(pug({
             data: {
                 imgHref: 'https://raw.githubusercontent.com/rpessoa21/nsws/master/static/',
+                // imgHref: '/',
                 baseHref: '/',
                 // baseHref: 'http://mgstudio.com.br/clientes_mg/' + theme + '/static/',
             },

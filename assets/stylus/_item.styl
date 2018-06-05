@@ -39,7 +39,9 @@
 
 .item-banner--fullscreen---downbutton
 	bottom 20px
+	left 50%
 	position absolute
+	transform translateX(-50%)
 	z-index 2
 	
 	a
@@ -155,6 +157,31 @@
 	
 
 
+
+
+// ===============
+
+.item-video--fullscreen
+	max-height 100vh
+	overflow hidden
+	position relative
+	
+	
+	&:after
+		background-color rgba(black, .5)
+		content ''
+		height 100%
+		left 0
+		top 0
+		position absolute
+		width 100%
+		z-index 1
+
+
+	video
+		transform scale(1.5)
+
+	
 
 
 

@@ -30,7 +30,7 @@ node_modules
 # Arquivos de layout
 # static/img
 
-*.mp4
+# *.mp4
 *.ogg
 *.ogv
 *.webm

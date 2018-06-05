@@ -11,9 +11,15 @@ block vars
 block content
 	main.main
 		section.banner--video
-			video(autoplay, width="100%", muted, loop)
-				source(src=baseHref + "videos/luanda.mp4" type="video/mp4")
+			.item-video--fullscreen
+				//- .js-video.videoWrapper
+				video(autoplay, width="100%", muted, loop)
+					source(src=baseHref + "videos/luanda.mp4" type="video/mp4")
 					
+				.item-banner--fullscreen---downbutton
+					a(href="#under-the-fold")
+						img(src="img/arrow-dot.png", alt="")
+							
 			//- .item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
 				//- .item-banner--fullscreen---primary
 					h2 Temos expertise em soluções para internet
@@ -21,9 +27,6 @@ block content
 				//- .item-banner--fullscreen---second
 					p Somos uma equipe com base em Angola
 
-				.item-banner--fullscreen---downbutton
-					a(href="#under-the-fold")
-						img(src="img/arrow-dot.png", alt="")
 
 
 
@@ -32,7 +35,7 @@ block content
 				.row
 					.col-xs-12
 						.item-title
-							h2 O que nós fazemos
+							h2 Sobre a NSWS Solution
 
 				.card-grid--alternate
 					.item-parallax-1
@@ -43,7 +46,7 @@ block content
 						
 							p Contamos com uma <b>equipe altamente qualificada</b>, capaz de oferecer serviço de <b>ótima qualidade</b> por um <b>valor justo</b>.
 
-		section.grid--portfolio
+		//- section.grid--portfolio
 			.container
 				.row
 					.col-xs-12
