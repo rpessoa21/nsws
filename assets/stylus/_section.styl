@@ -40,9 +40,14 @@ section
 	// =====================
 	
 	&.banner-squares--left-top
-		margin-top 180px
 		position relative
 		
+		.home &
+			margin-top 180px
+			
+		.about-us &
+			padding-top 0
+
 		&:before
 			background url(../img/squares--gray.png) no-repeat
 			content ''
@@ -59,3 +64,17 @@ section
 		.row
 			position relative
 			z-index 2
+	
+
+
+
+
+
+	// background full
+	// ===============
+		
+	&.bg--full
+		background-position left center
+		
+		.about-us &
+			padding-bottom 0

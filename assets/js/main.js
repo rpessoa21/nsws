@@ -53,6 +53,31 @@ jQuery(document).ready(function($){
 
 
 
+	// ==========
+	// ancora
+	// ==========
+	try {
+		$.easing.easeInOutExpo = function (x, t, b, c, d) { // definição do efeito que será posteriormente usado no animate
+			if (t==0) return b;
+			if (t==d) return b+c;
+			if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+			return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+		}
+		
+		$('a.anchor').click(function(e){
+			$('html, body').stop().animate({
+				scrollTop: $( $(this.hash) ).offset().top
+			}, 800, 'easeInOutExpo');
+			return false;
+		});
+	} catch(e) {
+		console.log(e)
+	}
+
+
+
+
+
 
 	// =========================
 	// slider fade single
@@ -309,19 +334,7 @@ jQuery(document).ready(function($){
 	// 	console.log(e)
 	// }
 
-	// ==========
-	// ancora
-	// ==========
-	// try {
-	// 	$('a.anchor').click(function(e){
-	// 		$('html, body').stop().animate({
-	// 			scrollTop: $( $(this).attr('href') ).offset().top
-	// 		}, 800, 'swing');
-	// 		return false;
-	// 	});
-	// } catch(e) {
-	// 	console.log(e)
-	// }
+
 
 
 	// ===============
