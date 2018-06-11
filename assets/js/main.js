@@ -127,24 +127,39 @@ jQuery(document).ready(function($){
 
 
 
+
+	// ===============
+	// button
+	// ===============
+
+	document.querySelector('.button').onmousemove = function (e) {
+		var x = e.pageX - e.target.offsetLeft;
+		var y = e.pageY - e.target.offsetTop;
+
+		e.target.style.setProperty('--x', x + 'px');
+		e.target.style.setProperty('--y', y + 'px');
+	};
+
+
+
 	// ===============
 	// acordion
 	// ===============
-	try {
-		$('dl dt').first().addClass('active');
-		$('dl dd').first().slideDown().addClass('active');
+	// try {
+	// 	$('dl dt').first().addClass('active');
+	// 	$('dl dd').first().slideDown().addClass('active');
 		
-		$('dt').click(function(){
-		  $('dt').removeClass('active');
-		  $('dd').stop().slideUp().removeClass('active');
-		  if(!$(this).next().is(":visible")) {
-			$(this).next().slideDown().addClass('active');
-			$(this).addClass('active');
-		}
-	});
-	} catch(e) {
-		console.log(e)
-	}
+	// 	$('dt').click(function(){
+	// 	  $('dt').removeClass('active');
+	// 	  $('dd').stop().slideUp().removeClass('active');
+	// 	  if(!$(this).next().is(":visible")) {
+	// 		$(this).next().slideDown().addClass('active');
+	// 		$(this).addClass('active');
+	// 	}
+	// });
+	// } catch(e) {
+	// 	console.log(e)
+	// }
 
 
 

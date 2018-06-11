@@ -40,3 +40,52 @@
 	&:hover
 		background-color transparent
 		color lightColorMaster
+		
+
+
+
+
+
+// efeito
+// ==========
+
+.button {
+	appearance none
+	background #6e3895
+	border-radius 28px
+	border none
+	color white
+	cursor pointer
+	font-family fontMaster
+	font-size 18px
+	font-weight 700
+	letter-spacing 2px
+	outline none
+	overflow hidden
+	padding 17px 42px
+	position relative
+	text-transform uppercase
+	
+	span {
+		position: relative;
+		pointer-events: none;
+	}
+	
+	&::before {
+		--size: 0;
+
+		content: '';
+		position: absolute;
+		left: var(--x);
+		top: var(--y);
+		width: var(--size);
+		height: var(--size);
+		background: radial-gradient(circle closest-side, #ce8229, transparent);
+		transform: translate(-50%, -50%);
+		transition: width .2s ease, height .2s ease;
+	}
+	
+	&:hover::before {
+		--size: 400px;
+	}
+}
