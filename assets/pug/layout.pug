@@ -34,7 +34,7 @@ html(lang="pt-BR")
 
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700", rel="stylesheet")
 		
-		link(type='text/css', rel='stylesheet', href=imgHref + 'css/style.css')
+		link(type='text/css', rel='stylesheet', href='css/style.css')
 
 	block vars
 	body(itemscope itemtype="http://schema.org/WebPage", class= bodyClass)
@@ -74,10 +74,10 @@ html(lang="pt-BR")
 					nav(role="navigation", itemscope="itemscope", itemtype="http://www.schema.org/SiteNavigationElement").menu--primary
 						ul
 							li(class=(bodyClass === 'home')? "current-menu-item" : "")
-								a(href=baseHref + '', itemprop="url") Home
+								a(href=baseHref + 'index.html', itemprop="url") Home
 
 							li(class=(bodyClass === 'quem-somos')? "current-menu-item" : "")
-								a(href=baseHref + 'about-us', itemprop="url") Quem somos
+								a(href=baseHref + 'about-us.html', itemprop="url") Quem somos
 
 							li(class=(bodyClass === 'servicos')? "current-menu-item" : "")
 								a(href=baseHref + '', itemprop="url") Serviços
@@ -134,7 +134,7 @@ html(lang="pt-BR")
 			//- script(src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js")
 			
 
-			script(src=imgHref + "js/main.min.js")
+			script(src="js/main.min.js")
 
 
 			
