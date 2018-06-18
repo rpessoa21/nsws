@@ -49,11 +49,11 @@ html(lang="pt-BR")
 							span.menu-icon
 
 				.header--logo
-					a(href=baseHref + "")
-						img(src=imgHref + "img/logo.png", alt="")
+					a(href=baseHref + "index.html")
+						//- img(src=imgHref + "img/logo.png", alt="")
 
 
-						//- svg#logo(xmlns='http://www.w3.org/2000/svg', width='219.25', height='73.782', viewbox='0 0 219.25 73.782')
+						svg#logo(xmlns='http://www.w3.org/2000/svg', width='219.25', height='73.782', viewbox='0 0 219.25 73.782')
 							path#s_1_(d='M115.25 13.599v1.998h-5.471v-1.998c0-.372-.188-.56-.56-.56H77.201c-.374 0-.56.188-.56.56v6.395c0 .32.186.479.56.479h25.019c3.09 0 5.701 1.079 7.833 3.237 2.131 2.158 3.197 4.756 3.197 7.793v6.395c0 3.037-1.066 5.634-3.197 7.792-2.132 2.158-4.743 3.238-7.833 3.238H63.201V38.457h39.019c.372 0 .56-.186.56-.559v-6.395c0-.32-.188-.48-.56-.48H77.201c-3.038 0-5.635-1.079-7.793-3.237-2.158-2.158-3.237-4.756-3.237-7.793v-6.395c0-3.038 1.079-5.635 3.237-7.793s4.756-3.237 7.793-3.237h27.019c3.09 0 5.701 1.079 7.833 3.237 2.131 2.158 3.197 4.756 3.197 7.794z')
 							path#w(d='M171.646 2.568h11.111l-17.426 46.36h-8.152l-13.988-31.013-13.429 31.013h-8.073l-18.224-46.36s10.513-1.571 15.987 11.911c1.284 3.163 6.314 15.426 6.314 15.426l11.909-27.337h10.871l12.629 27.497 10.471-27.497z')
 							g#solutions()
@@ -83,10 +83,10 @@ html(lang="pt-BR")
 								a(href=baseHref + '', itemprop="url") Serviços
 
 							li(class=(bodyClass === 'portfolio')? "current-menu-item" : "")
-								a(href=baseHref + '', itemprop="url") Portfolio
+								a(href=baseHref + 'projects.html', itemprop="url") Portfolio
 
 							li(class=(bodyClass === 'contacto')? "current-menu-item" : "")
-								a(href=baseHref + '#contact', itemprop="url").anchor Contacto
+								a(href=baseHref + 'contact.html', itemprop="url").anchor Contacto
 
 
 					nav.menu--language

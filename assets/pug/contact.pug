@@ -1,0 +1,50 @@
+extends ./layout.pug
+
+block title
+	- var titlePage = 'Contact';
+
+block vars
+	- var bodyClass = 'contact';
+	- var lang = 'pt';
+
+
+block content
+	main.main
+		section.bg--full(style="background-image: url("+ imgHref + "img/coffee.jpg)")
+			.container
+				.row
+					.col-xs-12.col-sm-6
+						.form-contact
+
+							form(action="", method="post")
+								label Nome:
+								input(type="text")
+
+								label E-mail:
+								input(type="text")
+
+								label Mensagem:
+								textarea
+
+								input(type="submit")
+
+
+					.col-xs-12.col-sm-6
+						.item-contacts-info
+							p Envie-nos um e-mail através do formulário e responderemos em breve.
+							p +244 925 934 090
+							p +244 923 739 775
+							p
+								a(href="mailto:info@nswsolution.com") info@nswsolution.com
+
+		//- section.banner-squares--left-top#contact
+			.item-banner-squares--banner(style="background-image: url("+imgHref+"img/coffee.jpg)")
+				.item-section--title
+					h2 Contacto
+				
+				.item-banner-squares--text
+					p +244 925 934 090
+					p +244 923 739 775
+
+					p
+						a(href="mailto:info@nswsolution.com") info@nswsolution.com

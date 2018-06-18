@@ -132,13 +132,15 @@ jQuery(document).ready(function($){
 	// button
 	// ===============
 
-	document.querySelector('.button').onmousemove = function (e) {
-		var x = e.pageX - e.target.offsetLeft;
-		var y = e.pageY - e.target.offsetTop;
+	$('section a').each(function(){
+		$(this).mousemove(function(e){
+			var x = e.pageX - e.target.offsetLeft;
+			var y = e.pageY - e.target.offsetTop;
 
-		e.target.style.setProperty('--x', x + 'px');
-		e.target.style.setProperty('--y', y + 'px');
-	};
+			e.target.style.setProperty('--x', x + 'px');
+			e.target.style.setProperty('--y', y + 'px');
+		});
+	});
 
 
 
