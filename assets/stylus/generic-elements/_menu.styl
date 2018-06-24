@@ -130,3 +130,34 @@
 			pointer-events all
 
 
+
+
+
+// ===============
+
+.menu--social
+	@media (min-width menuViewPort)
+		position absolute
+		right 100px
+		transform translateY(-18px)
+	
+	.sticky &
+		display none
+
+	ul
+		display flex
+		
+		li
+			+ li
+				margin-left 10px
+		
+		svg
+			fill lightColorMaster
+			height 17px
+			transition transform .4s ease
+			width 17px
+			
+		a
+			&:hover
+				svg
+					transform translateY(-2px)
