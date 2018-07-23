@@ -69,11 +69,13 @@
 	
 
 
+
 // ===============
+
 .menu--language
 	@media (min-width menuViewPort)
 		position absolute
-		right 0
+		right 3px
 		transform translateY(-18px)
 	
 	.sticky &
@@ -108,7 +110,23 @@
 
 
 
+// menu footer
+// =============
+
+.menu--footer
+	ul
+		display flex
+		justify-content flex-end
+		
+		li
+			+ li
+				margin-left 10px
+
+
+
+
 // ===================
+
 .menu-overlay
 	background-color rgba(white, .97)
 	height 100%
@@ -138,7 +156,7 @@
 .menu--social
 	@media (min-width menuViewPort)
 		position absolute
-		right 100px
+		right 50px
 		transform translateY(-18px)
 	
 	.sticky &
@@ -161,3 +179,8 @@
 			&:hover
 				svg
 					transform translateY(-2px)
+					
+
+	.open-modal
+		color white
+		font-size 13px

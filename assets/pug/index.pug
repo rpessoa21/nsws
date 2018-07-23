@@ -61,7 +61,49 @@ block content
 						.item-section--title
 							h2 Últimos trabalhos em web design
 
-				.row(style="align-items: center;")
+						.relative
+							.swiper-container.card-slider--single
+								.swiper-wrapper
+									.swiper-slide
+										.card-grid--portfolio
+											ul
+												li
+													.item-grid--portfolio---image
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----mobile
+																img(src=imgHref + "img/_content/screenshot/coop/mobile.png", alt="")
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----tablet
+																img(src=imgHref + "img/_content/screenshot/coop/tablet.png", alt="")
+
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----notebook
+																img(src=imgHref + "img/_content/screenshot/coop/notebook.png", alt="")
+
+
+									.swiper-slide
+										.card-grid--portfolio
+											ul
+												li
+													.item-grid--portfolio---image
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----mobile
+																img(src=imgHref + "img/_content/screenshot/coop/mobile.png", alt="")
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----tablet
+																img(src=imgHref + "img/_content/screenshot/coop/tablet.png", alt="")
+
+														.item-grid--portfolio---screenshot
+															.item-grid--portfolio---screenshot----notebook
+																img(src=imgHref + "img/_content/screenshot/coop/notebook.png", alt="")
+
+
+								.swiper-button-prev
+								.swiper-button-next
+
+							.swiper-pagination
+
+				//- .row(style="align-items: center;")
 					.col-xs-12.col-sm-6
 						.item-grid--portfolio---text
 							.item-grid--portfolio---text----title

@@ -85,12 +85,12 @@ jQuery(document).ready(function($){
 	try {
 		var galleryTop = new Swiper('.card-slider--single', {
 			centeredSlides: true,
-			effect: 'fade',
+			// effect: 'fade',
 			speed: 1000,
-			autoplay: {
-				delay: 6000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 6000,
+			// 	disableOnInteraction: false,
+			// },
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
@@ -230,19 +230,20 @@ jQuery(document).ready(function($){
 	// ========================
 	// modal
 	// ========================
-	// try {
-	// 	$('.open-modal').click(function (e) {
-	// 		openModal = $(this).attr('href');
+	
+	try {
+		$('.open-modal').click(function (e) {
+			openModal = $(this).attr('href');
 
-	// 		$('.modal-overlay, ' + openModal).addClass('active');
-	// 	});
+			$('.modal-overlay, ' + openModal).addClass('active');
+		});
 
-	// 	$('.close-modal, .modal-overlay').click(function (e) {
-	// 		$('.modal-overlay,' + openModal).removeClass('active');
-	// 	});
-	// } catch(e) {
-	// 	console.log(e);
-	// }
+		$('.close-modal, .modal-overlay').click(function (e) {
+			$('.modal-overlay,' + openModal).removeClass('active');
+		});
+	} catch(e) {
+		console.log(e);
+	}
 
 
 

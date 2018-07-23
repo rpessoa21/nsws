@@ -2,7 +2,8 @@
 // =============
 .modal
 	// backface-visibility hidden
-	background darkColorMaster
+	// background darkColorMaster
+	background-color white
 	box-shadow 0px 0px 6px rgba(darkColorMaster, .7)
 	color white
 	height 80vh
@@ -72,7 +73,13 @@
 	// especifico desse projeto
 	// ==========================
 	&#login
+		max-width 480px
+		
+
 		.row
+			align-items center
+			height 100%
+			
 			@media (min-width tablet)
 				gutter(30px, 30px)
 			
@@ -81,6 +88,7 @@
 			text-align center
 			
 		.modal-title
+			color darkColorMaster
 			font italic 700 34px fontSecond
 			margin-bottom 10px
 			margin-top 20px
