@@ -181,4 +181,13 @@
 // ===================
 
 .card-grid--service-list
-	@extends .card-grid--four-cols
+	ul
+		display flex
+		flex-flow row wrap
+		
+		li
+			flex-basis 100%
+			padding 70px 0
+			
+			&:nth-child(odd)
+				background-color rgba(darkColorMaster, .2)

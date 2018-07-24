@@ -236,6 +236,7 @@ jQuery(document).ready(function($){
 			openModal = $(this).attr('href');
 
 			$('.modal-overlay, ' + openModal).addClass('active');
+			e.preventDefault();
 		});
 
 		$('.close-modal, .modal-overlay').click(function (e) {
