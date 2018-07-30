@@ -163,16 +163,22 @@
 // ===============
 
 .menu--social
-	@media (min-width menuViewPort)
-		position absolute
-		right 50px
-		transform translateY(-18px)
+	.header &
+		@media (min-width menuViewPort)
+			position absolute
+			right 50px
+			transform translateY(-18px)
+			
 	
 	.sticky &
 		display none
 
 	ul
 		display flex
+		
+		.footer &
+			justify-content flex-end
+			margin-top 20px
 		
 		li
 			+ li

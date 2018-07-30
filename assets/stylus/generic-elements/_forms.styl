@@ -12,8 +12,8 @@ placeholder()
 	
 +placeholder()
 	color darkColorTwo
-	font italic 15px fontSecond
-	transform translateY(-2px)
+	font 14px fontMaster
+	// transform translateY(-2px)
 	
 input
 	&[type="text"]
@@ -26,13 +26,15 @@ input
 		width 100%
 		
 	&[type="submit"]
-		background-color transparent
+		background-color darkColorMaster
 		border none
+		// border-radius 3px
+		color white
 		cursor pointer
-		font 300 13px fontMaster
-		letter-spacing 3px
+		font 15px fontMaster
 		outline none
-		// padding 13px 60px
+		text-transform uppercase
+		padding 7px 16px
 	
 textarea
 	background-color #e0e0e0
@@ -97,82 +99,118 @@ select
 
 
 
+// form newsletter
+// ===========
 
 .form-newsletter
 	margin-left auto
 	max-width 320px
 
+	.field
+		position relative
+		
+	input
+		&[type="submit"]
+			font-size 13px
+			position absolute
+			top 0
+			right 0
 
+
+
+
+// form contact center
+// =================
+
+.form-contact--center
+	custom-size(640px)
+
+	label
+		display inline-block
+		font-size 14px
+		margin-bottom 10px
+		
+	input
+	textarea
+		font 13px fontMaster
+		margin-bottom 16px
+		
+	input
+		&[type="submit"]
+			display block
+			margin-left auto
+			margin-right 0
 
 
 
 // ====================
-.form-curriculum
-	margin-top 50px
+
+// .form-curriculum
+// 	margin-top 50px
 	
-	form
-		align-items center
-		display flex
+// 	form
+// 		align-items center
+// 		display flex
 		
-	.submit
-		padding-left 40px
-		transform translateY(-5px)
+// 	.submit
+// 		padding-left 40px
+// 		transform translateY(-5px)
 		
-	.button
-		position absolute
-		right -1px
-		top -1px
-		background-color white
-		padding 8.5px 20px
-		box-shadow 0px 2px 6px rgba(black, .4)
-		font 300 13px fontMaster
-		letter-spacing 3px
+// 	.button
+// 		position absolute
+// 		right -1px
+// 		top -1px
+// 		background-color white
+// 		padding 8.5px 20px
+// 		box-shadow 0px 2px 6px rgba(black, .4)
+// 		font 300 13px fontMaster
+// 		letter-spacing 3px
 		
 
 
-input[type="file"]
-.anexo
-	height 0.1px
-	left 0
-	opacity 0
-	overflow hidden
-	position absolute
-	width 0.1px
-	z-index -1
+// input[type="file"]
+// .anexo
+// 	height 0.1px
+// 	left 0
+// 	opacity 0
+// 	overflow hidden
+// 	position absolute
+// 	width 0.1px
+// 	z-index -1
 
 
-	+ label
-		border 1px #ccc solid
-		cursor pointer
-		display inline-block
-		font-size 14px
-		margin-bottom 10px
-		padding 10px
-		position relative
-		transition background-color .4s ease
-		width 100%
+// 	+ label
+// 		border 1px #ccc solid
+// 		cursor pointer
+// 		display inline-block
+// 		font-size 14px
+// 		margin-bottom 10px
+// 		padding 10px
+// 		position relative
+// 		transition background-color .4s ease
+// 		width 100%
 		
-		span
-			color transparent
+// 		span
+// 			color transparent
 
 
-input[type="file"]:focus + label
-input[type="file"]:focus .button
-input[type="file"] + label:hover
-input[type="file"] .button:hover
-	background-color lightColorMaster
+// input[type="file"]:focus + label
+// input[type="file"]:focus .button
+// input[type="file"] + label:hover
+// input[type="file"] .button:hover
+// 	background-color lightColorMaster
 
 
-input[type="file"]:focus + label
-	outline 1px dotted #000
-	outline -webkit-focus-ring-color auto 5px
+// input[type="file"]:focus + label
+// 	outline 1px dotted #000
+// 	outline -webkit-focus-ring-color auto 5px
 
 
-input[type="file"] + label *
-	pointer-events: none;
+// input[type="file"] + label *
+// 	pointer-events: none;
 
 
 
 
-.resposta
-	display none
+// .resposta
+// 	display none
