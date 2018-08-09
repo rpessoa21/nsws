@@ -198,6 +198,7 @@ jQuery(document).ready(function($){
 		$('.item-parallax-2').css('transform', 'translateY('+ -(scrolled*0.15)+'px)');
 		$('.item-parallax-3').css('transform', 'translateY('+ -(scrolled*0.2)+'px)');
 		$('.item-parallax-4').css('transform', 'translateY('+ -(scrolled*0.3)+'px)'); // MAIS RÃPIDO
+		$('.item-parallax-5').css('transform', 'translateY('+ -(scrolled*0.45)+'px)'); // MAIS RÃPIDO
 	}
 
 

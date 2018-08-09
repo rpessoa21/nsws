@@ -232,6 +232,31 @@ div[class^='item-parallax-']
 	width 400px
 	
 
+.item-parallax-3
+	background-color rgba(darkColorMaster, .4)
+	height 360px
+	right 10%
+	top 20px
+	transition .8s ease .1s
+	width 360px
+	
+
+.item-parallax-4
+	background-color rgba(darkColorTwo, .6)
+	height 120px
+	right 8%
+	top 0
+	transition .8s ease .1s
+	width 120px
+	
+
+.item-parallax-5
+	background-color rgba(darkColorTwo, .2)
+	height 80px
+	right 6%
+	top 200px
+	transition .8s ease .1s
+	width 80px
 
 
 // about us
@@ -280,3 +305,51 @@ div[class^='item-parallax-']
 	
 	p + p
 		margin-top 8px
+		
+
+
+
+
+
+
+// conteudo que se alterna left/right
+// ===============
+
+.item-alternate
+	.row
+		align-items center
+
+		@media (min-width desktop)
+			
+			// linhas pares
+			// =========
+				
+			&:nth-of-type(even)
+				flex-direction row-reverse
+				
+
+
+			// linhas impares
+			// ========
+				
+			&:nth-of-type(odd)
+				.item-alternate--image
+					text-align right
+					
+
+
+.item-alternate--title
+	margin-bottom 40px
+	
+
+.item-alternate--text
+	+ .item-alternate--button
+		margin-top 40px
+		
+
+.item-alternate--image
+	position relative
+	
+	img
+		position relative
+		z-index 1000
