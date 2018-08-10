@@ -63,12 +63,15 @@ jQuery(document).ready(function($){
 			if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
 			return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
 		}
-		
-		$('a.anchor').click(function(e){
-			$('html, body').stop().animate({
-				scrollTop: $( $(this.hash) ).offset().top
-			}, 800, 'easeInOutExpo');
-			return false;
+
+
+		$('.anchor').each(function(){
+			$(this).click(function(e){
+				$('html, body').stop().animate({
+					scrollTop: $( $(this.hash) ).offset().top
+				}, 800, 'easeInOutExpo');
+				return false;
+			});
 		});
 	} catch(e) {
 		console.log(e)
@@ -144,6 +147,54 @@ jQuery(document).ready(function($){
 
 
 
+
+	// ===================
+	// animation
+	// ===================
+
+	try {
+		$.fn.isOnScreen = function(){
+
+		    var win = $(window);
+
+		    var viewport = {
+		        top : win.scrollTop(),
+		        left : win.scrollLeft()
+		    };
+		    viewport.right = viewport.left + win.width();
+		    viewport.bottom = viewport.top + win.height();
+
+		    var bounds = this.offset();
+		    bounds.right = bounds.left + this.outerWidth();
+		    bounds.bottom = bounds.top + this.outerHeight();
+
+		    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+		};
+
+		$('.item-animation').each(function(){
+			if ($(this).isOnScreen() == true) {
+				$(this).addClass('visible');
+			}
+		});
+
+		$(window).scroll(function(){
+			$('.item-animation').each(function(){
+				var elPos = $(this).offset().top;
+				var topWindow = $(window).scrollTop();
+				var vp = $(window).height();
+
+				if ($(this).isOnScreen() == true) {
+					$(this).addClass('visible');
+				}
+			});
+		});
+	} catch(e) {
+		console.log(e);
+	}
+
+
+
 	// ===============
 	// acordion
 	// ===============
@@ -188,18 +239,32 @@ jQuery(document).ready(function($){
 	// =========================
 	// EFEITO PARALLAX DOS OBJETOS
 	// =========================
-	
-	$(window).scroll(function(e){
-		parallax();
-	});
-	function parallax(){
-		var scrolled = $(window).scrollTop();
-		$('.item-parallax-1').css('transform', 'translateY('+ -(scrolled*0.08)+'px)'); // MAIS LENTO
-		$('.item-parallax-2').css('transform', 'translateY('+ -(scrolled*0.15)+'px)');
-		$('.item-parallax-3').css('transform', 'translateY('+ -(scrolled*0.2)+'px)');
-		$('.item-parallax-4').css('transform', 'translateY('+ -(scrolled*0.3)+'px)'); // MAIS RÃPIDO
-		$('.item-parallax-5').css('transform', 'translateY('+ -(scrolled*0.45)+'px)'); // MAIS RÃPIDO
+
+	try {
+		function parallax(){
+			var scrolled = $(window).scrollTop();
+			$('.item-parallax-1').css('transform', 'translateY('+ -(scrolled*0.08)+'px)');
+			$('.item-parallax-2').css('transform', 'translateY('+ -(scrolled*0.15)+'px)');
+			$('.item-parallax-3').css('transform', 'translateY('+ -(scrolled*0.2)+'px)');
+			$('.item-parallax-4').css('transform', 'translateY('+ -(scrolled*0.3)+'px)');
+			$('.item-parallax-5').css('transform', 'translateY('+ -(scrolled*0.45)+'px)');
+			$('.item-parallax-6').css('transform', 'translateY('+ -(scrolled*0.15)+'px)');
+			$('.item-parallax-7').css('transform', 'translateY('+ -(scrolled*0.2)+'px)');
+			$('.item-parallax-8').css('transform', 'translateY('+ -(scrolled*0.3)+'px)');
+		}
+
+		$(window).scroll(function(e){
+			$('div[class^="item-parallax-"').each(function(){
+				if ($(this).isOnScreen() == true) {
+					parallax();
+				}
+			});
+		});
+	} catch(e) {
+		console.log(e);
 	}
+	
+
 
 
 
