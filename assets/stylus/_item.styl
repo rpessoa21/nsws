@@ -318,6 +318,7 @@ div[class^='item-parallax-']
 .item-alternate
 	.row
 		align-items center
+		padding 80px 0
 
 		@media (min-width desktop)
 			
@@ -326,6 +327,10 @@ div[class^='item-parallax-']
 				
 			&:nth-of-type(even)
 				flex-direction row-reverse
+				
+				p
+				h3
+					text-align right
 				
 
 
@@ -341,10 +346,15 @@ div[class^='item-parallax-']
 .item-alternate--title
 	margin-bottom 40px
 	
+	> *
+		font-family fontMaster
+		font-size 40px
+		font-weight 300
+	
 
 .item-alternate--text
 	+ .item-alternate--button
-		margin-top 40px
+		margin-top 60px
 		
 
 .item-alternate--image
