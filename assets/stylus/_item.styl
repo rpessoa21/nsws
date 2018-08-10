@@ -396,3 +396,25 @@ div[class^='item-parallax-']
 	img
 		position relative
 		z-index 1000
+
+
+
+
+// back to top
+// ===========
+
+.item-back-to-top
+	background #4ca2d1 url(../img/arrow.png) no-repeat 48% 46%
+	border-radius 50%
+	bottom 8vh
+	cursor pointer
+	display none
+	height 54px
+	position fixed
+	right 10px
+	transition background .4s ease
+	width 54px
+	z-index 1000
+	
+	&:hover
+		background lighten(#4ca2d1, 10) url(../img/arrow.png) no-repeat 48% 46%

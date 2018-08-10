@@ -263,6 +263,31 @@ jQuery(document).ready(function($){
 	} catch(e) {
 		console.log(e);
 	}
+
+
+
+
+
+	// ==================
+	// back to top
+	// ==================
+
+	try {
+		$(window).scroll(function(){
+			if ($(window).scrollTop() > 250){
+				$(".item-back-to-top").fadeIn(800);
+			} else {
+				$(".item-back-to-top").fadeOut();
+			}
+		});
+
+		$(".item-back-to-top").click(function(){
+			$("html, body").animate({scrollTop : 0}, 800);
+		});
+		
+	} catch(e) {
+		console.log(e);
+	}
 	
 
 
