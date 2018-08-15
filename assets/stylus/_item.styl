@@ -119,8 +119,27 @@
 // ====================
 
 .item-grid--service-list---item
-	custom-size(1024px)
+	padding 70px 0
 	text-align center
+	
+	p
+		custom-size(1024px)
+		
+	li
+		background-size contain
+		
+	li:nth-of-type(1) &
+		background url(../img/_content/computer-network.png) no-repeat right bottom
+			
+	li:nth-of-type(2) &
+		background url(../img/_content/computer-web.png) no-repeat left bottom
+		
+	li:nth-of-type(3) &
+		background url(../img/_content/computer-software.png) no-repeat right bottom
+		
+	li:nth-of-type(4) &
+		background url(../img/_content/computer-safety.png) no-repeat left bottom
+		
 	
 
 .item-grid--service-list---title
@@ -388,6 +407,9 @@ div[class^='item-parallax-']
 .item-alternate--text
 	+ .item-alternate--button
 		margin-top 60px
+	
+	p
+		line-height 1.8
 		
 
 .item-alternate--image
