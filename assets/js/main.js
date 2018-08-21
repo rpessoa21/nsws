@@ -83,7 +83,7 @@ jQuery(document).ready(function($){
 
 
 	// =========================
-	// slider fade single
+	// slider single
 	// =========================
 	try {
 		var galleryTop = new Swiper('.card-slider--single', {
@@ -101,6 +101,28 @@ jQuery(document).ready(function($){
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
+			},
+		});
+
+
+	} catch(e) {
+		console.log(e)
+	}
+
+
+
+
+	// =========================
+	// slider fade single
+	// =========================
+	try {
+		var galleryTop = new Swiper('.card-slider--fade', {
+			centeredSlides: true,
+			effect: 'fade',
+			speed: 1000,
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false,
 			},
 		});
 

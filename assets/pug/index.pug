@@ -14,19 +14,39 @@ block content
 			.item-video--fullscreen
 				//- .js-video.videoWrapper
 				video(autoplay, width="100%", muted, loop)
-					source(src=imgHref + "videos/luanda.mp4" type="video/mp4")
+					source(src="http://nswsolution.com/videos/luanda.mp4" type="video/mp4")
+					//- source(src=imgHref + "videos/luanda.mp4" type="video/mp4")
 					
 				.item-banner--fullscreen---downbutton
 					a(href="#under-the-fold")
 						img(src="img/arrow-dot.png", alt="")
+						
 							
+			.item-slider
+				.swiper-container.card-slider--fade
+					.swiper-wrapper
+						.swiper-slide
+							.item-banner--fullscreen---primary
+								h2 Serviços para facilitar a vida de sua empresa
+					
+							.item-banner--fullscreen---second
+								p Temos uma equipa de profissionais Ágeis com vasta experiencia
+
+
+						.swiper-slide
+							.item-banner--fullscreen---primary
+								h2 Qualidade e eficiência
+					
+							.item-banner--fullscreen---second
+								p Possuimos uma gama de serviços e produtos informáticos
+
+
 			//- .item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
-				//- .item-banner--fullscreen---primary
+				.item-banner--fullscreen---primary
 					h2 Temos expertise em soluções para internet
 		
-				//- .item-banner--fullscreen---second
+				.item-banner--fullscreen---second
 					p Somos uma equipe com base em Angola
-
 
 
 
