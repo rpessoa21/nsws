@@ -24,9 +24,12 @@
 	
 .item-banner--fullscreen---primary
 	font-family fontMaster
-	font-size 48px
+	font-size 28px
 	font-weight 700
 	
+	@media (min-width desktop)
+		font-size 48px
+
 	h2
 		font-family inherit
 		font-size inherit
@@ -35,8 +38,11 @@
 			display none
 	
 .item-banner--fullscreen---second
-	font-size 36px
+	font-size 22px
 	font-weight 300
+	
+	@media (min-width desktop)
+		font-size 36px
 	
 
 .item-banner--fullscreen---downbutton
@@ -162,7 +168,6 @@
 	
 	p
 		line-height 1.8
-		text-align justify
 
 
 
@@ -204,9 +209,14 @@
 // ===============
 
 .item-video--fullscreen
+	background url(../img/_content/angola.jpg) no-repeat
+	background-size cover
 	max-height 100vh
 	overflow hidden
 	position relative
+	
+	@media (max-width menuViewPort - 1)
+		height 100vh
 	
 	
 	&:after
@@ -222,6 +232,9 @@
 
 	video
 		transform scale(1.15)
+		
+		@media (max-width menuViewPort - 1)
+			display none
 
 	
 
@@ -363,6 +376,8 @@ div[class^='item-parallax-']
 // ===============
 
 .item-alternate
+	padding 0 20px
+	
 	.row
 		align-items center
 		padding 80px 0
@@ -375,7 +390,7 @@ div[class^='item-parallax-']
 			&:nth-of-type(even)
 				flex-direction row-reverse
 				
-				// p
+				p
 				h3
 				.item-section--button
 					text-align right
@@ -398,6 +413,9 @@ div[class^='item-parallax-']
 .item-alternate--title
 	margin-bottom 40px
 	
+	@media (max-width tablet - 1)
+		text-align center
+	
 	> *
 		font-family fontMaster
 		font-size 40px
@@ -405,18 +423,29 @@ div[class^='item-parallax-']
 	
 
 .item-alternate--text
+	@media (max-width tablet - 1)
+		text-align center
+
+		
 	+ .item-alternate--button
 		margin-top 60px
 	
 	p
 		line-height 1.8
-		text-align justify
 		
 
 .item-alternate--image
 	position relative
 	
+	@media (min-width tablet) and (max-width desktop - 1)
+		text-align right
+		
+	@media (max-width tablet - 1)
+		text-align center
+	
 	img
+		height auto
+		max-width 100%
 		position relative
 		z-index 1000
 

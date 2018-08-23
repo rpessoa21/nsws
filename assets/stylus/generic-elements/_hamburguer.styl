@@ -8,10 +8,20 @@
 .menu-icon
 	hamburger-generator(29px, 3px, 4px, white, $timing-function: ease)
 	
+	@media (max-width menuViewPort - 1)
+		.sticky &
+			background-color darkColorTwo
+			
+			&:before
+			&:after
+				background-color darkColorTwo
+	
 
 .navigation-toggle
 	display inline-block
-	transform translate(11px, 18px)
+	
+	@media (min-width menuViewPort)
+		transform translate(11px, 18px)
 	
 	&.active
 		.menu-icon

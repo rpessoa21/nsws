@@ -48,11 +48,16 @@
 	custom-size(siteWidth)
 
 	.sticky &
+		background-color white
+		transition .4s ease
+		
 		@media (min-width menuViewPort)
+			background-color transparent
 			height 80px
 			
 		@media (min-width 1280px)
 			padding 0 40px
+
 
 
 
@@ -66,37 +71,44 @@
 		
 	svg
 		fill white
-		height 78px
+		height 40px
+		width 150px
+		
+		@media (min-width desktop)
+			fill white
+			height 78px
 			
-		body.projects &
-		body.contact &
-			path
-				fill #5066AF
+		// body.projects &
+		// body.contact &
+		// 	path
+		// 		fill #5066AF
 				
-				&#w
-					fill #6E3895
+		// 		&#w
+		// 			fill #6E3895
 
 		.sticky &
 			height 40px
 			width 150px
 		
 		path
+			
 			.sticky &
 				fill #5066AF
 				
 				&#w
 					fill #6E3895
 	
-	img
-		@media (max-width menuViewPort - 1)
-			width 200px
+
+	// img
+	// 	@media (max-width menuViewPort - 1)
+	// 		width 200px
 			
-		@media (min-width menuViewPort)
-			width 200px
+	// 	@media (min-width menuViewPort)
+	// 		width 200px
 			
-		.sticky &
-			@media (min-width menuViewPort)
-				width 200px
+	// 	.sticky &
+	// 		@media (min-width menuViewPort)
+	// 			width 200px
 
 
 
@@ -111,7 +123,8 @@
 	top 40px
 	
 	header.sticky &
-		display none
+		@media (min-width menuViewPort)
+			display none
 
 
 
