@@ -37,11 +37,13 @@
 					padding-right 0
 				
 			> a
-				color white
 				font-size 14px
 				letter-spacing 2.8px
 				text-transform uppercase
 				transition color .4s ease
+				
+				@media (min-width menuViewPort)
+					color white
 				
 				.projects &
 				.contact &
@@ -53,13 +55,15 @@
 					padding 10px 6px 10px 10px
 					text-align right
 					
+					
 				&:hover
 					@media (min-width menuViewPort)
 						color #999
 						
 				.sticky &
+					color darkColorMaster
+					
 					@media (min-width menuViewPort)
-						color darkColorMaster
 						font-size 13px
 					
 			// &.current-menu-item

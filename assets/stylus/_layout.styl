@@ -57,6 +57,10 @@
 			
 		@media (min-width 1280px)
 			padding 0 40px
+			
+
+	@media (max-width menuViewPort)
+		overflow visible
 
 
 
@@ -97,6 +101,15 @@
 				
 				&#w
 					fill #6E3895
+					
+
+		@media (max-width menuViewPort - 1)
+			path
+				.active &
+					fill #5066AF
+					
+					&#w
+						fill #6E3895
 	
 
 	// img

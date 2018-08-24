@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 	try {
 		$('.hamburguer').click(function(){
 			// ALTERNA O ESTADO PARA X OU ESTADO ORIGINAL
-			$('.navigation-toggle, .menu-overlay, .menu--primary, .header--menu, .menu--social, .header--main, .header--menu---wrap').toggleClass('active');
+			$('.navigation-toggle, .menu-overlay, .menu--primary, .header--menu, .menu--social, .header--main, .header--menu---wrap, .header').toggleClass('active');
 		});
 	} catch(e) {
 		console.log(e);
