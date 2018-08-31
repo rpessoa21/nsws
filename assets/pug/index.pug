@@ -244,23 +244,34 @@ block content
 				.row
 					.col-xs-12
 						.card-grid--service-list
-							ul
-								li(style="background-image: url("+imgHref+"img/_content/computer-network.png)")
-									.item-grid--service-list---item
-										.item-grid--service-list---title.item-animation
-											p Network
-											
-										.item-grid--service-list---icon.item-animation
-											img(src=imgHref + "img/_content/icons/010-community.png", alt="")
+							ul.item-grid--service-list---ul
+								li(style="background-image: url("+imgHref+"img/_content/computer-network.png)").item-grid--service-list---li
+									.container
+										.row
+											.col-xs-12.col-sm-5
+												.item-grid--service-list---item
+													//- .item-grid--service-list---icon.item-animation
 
-										.item-grid--service-list---description.item-animation
-											p Com a evolução tecnológica constante, bem como as constantes mudanças que os decisores procuram, os recursos limitados, os desafios de capacidade e as restrições orçamentais estão no topo das suas preocupações. No entanto não deverá preocupar-se com a sua infra- estrutura. Isso faz parte do nosso trabalho. Com o aparecimento da cloudcomputing, da virtualização e da mobilidade, a NSWS-Solution está actualmente alinhada com as exigências e as tendências do mercado. Oferecemos a tecnologia, processos e as pessoas de que os clientes precisam para transformar as suas infra-estruturas de TI, alcançando eficiência, redução nos custos e outros resultados estratégicos para o negócio.
+													.item-grid--service-list---title.item-animation
+														p
+															img(src=imgHref+"img/_content/icons/010-community.png", alt="")
+															| Network
 
-											p &nbsp;
-											
-											p Fizemos planificação e instalação de redes informáticas, temos a sua disposição uma equipa de profissionais especialistas em redes e sistemas informáticos com uma vasta experiência. Esta planificação é efectuada em conjunto com os clientes, respondendo às necessidades específicas de cada empresa. A manutenção de uma rede informática garante a estabilidade essencial para uma boa comunicação, quer a nível das comunicações de voz e de dados. Procuramos a melhor solução, com a garantia de uma óptima relação custo benefício, privilegiando a segurança dos seus dados e a operacionalidade do seu sistema.
+													.item-grid--service-list---image
+														img(src=imgHref+"img/_content/network-cable.png", alt="")
+														
+											.col-xs-12.col-sm-7
+													.item-grid--service-list---description.item-animation
+														p Com a evolução tecnológica constante, bem como as constantes mudanças que os decisores procuram, os recursos limitados, os desafios de capacidade e as restrições orçamentais estão no topo das suas preocupações. No entanto não deverá preocupar-se com a sua infra- estrutura. Isso faz parte do nosso trabalho. Com o aparecimento da cloudcomputing, da virtualização e da mobilidade, a NSWS-Solution está actualmente alinhada com as exigências e as tendências do mercado. Oferecemos a tecnologia, processos e as pessoas de que os clientes precisam para transformar as suas infra-estruturas de TI, alcançando eficiência, redução nos custos e outros resultados estratégicos para o negócio.
 
-								li(style="background-image: url("+imgHref+"img/_content/computer-web.png)")
+														p &nbsp;
+														
+														p Fizemos planificação e instalação de redes informáticas, temos a sua disposição uma equipa de profissionais especialistas em redes e sistemas informáticos com uma vasta experiência. Esta planificação é efectuada em conjunto com os clientes, respondendo às necessidades específicas de cada empresa. A manutenção de uma rede informática garante a estabilidade essencial para uma boa comunicação, quer a nível das comunicações de voz e de dados. Procuramos a melhor solução, com a garantia de uma óptima relação custo benefício, privilegiando a segurança dos seus dados e a operacionalidade do seu sistema.
+
+
+
+
+								li(style="background-image: url("+imgHref+"img/_content/computer-web.png)").item-grid--service-list---li
 									.item-grid--service-list---item
 										.item-grid--service-list---title.item-animation
 											p Web design
@@ -275,7 +286,11 @@ block content
 											
 											p Garantir uma aplicação Web sempre disponível e confiável de que a mesma esta funcionando plenamente em todo e qualquer momento só é possível quando é implementada a segurança, desde a sua concepção, desenvolvimento ate a fase de publicação &quot;Go Live!&quot; por este motivo somos bastante rigorosos neste aspecto.
 
-								li(style="background-image: url("+imgHref+"img/_content/computer-software.png)")
+
+
+
+
+								li(style="background-image: url("+imgHref+"img/_content/computer-software.png)").item-grid--service-list---li
 									.item-grid--service-list---item
 										.item-grid--service-list---title.item-animation
 											p Software
@@ -289,7 +304,9 @@ block content
 
 
 
-								li(style="background-image: url("+imgHref+"img/_content/computer-safety.png)")
+
+
+								li(style="background-image: url("+imgHref+"img/_content/computer-safety.png)").item-grid--service-list---li
 									.item-grid--service-list---item
 										.item-grid--service-list---title.item-animation
 											p Segurança
