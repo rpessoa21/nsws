@@ -156,18 +156,36 @@ svg #wheel
 // ====================
 
 .item-grid--service-list---li
-	background-color darkColorTwo
+	// background-color darkColorTwo
 	background-repeat no-repeat
 	padding 70px 0
+	position relative
+	
+
+	&:after
+		content ''
+		height 100%
+		left 0
+		position absolute
+		top 0
+		width 100%
+		z-index -1
+			
 	
 
 	&:nth-of-type(even)
-		background-color lightColorTwo
+		// background-color lightColorTwo
 		background-position right
+		
+		&:after
+			background linear-gradient(to right, white, lightColorTwo)
 
 
 	&:nth-of-type(odd)
 		color white
+		
+		&:after
+			background linear-gradient(to right, #18072f, darkColorTwo)
 		
 
 	&:nth-last-of-type(1)
@@ -177,6 +195,8 @@ svg #wheel
 
 .item-grid--service-list---item
 	text-align center
+	position relative
+	z-index 1
 	
 	p
 		custom-size(1024px)
@@ -252,6 +272,23 @@ svg #wheel
 	margin-bottom 70px
 	
 
+	#services &
+		background-color #18072f
+		margin-bottom 0
+		margin-top 80px
+		padding 50px 0
+		
+
+		h2
+			color white
+			
+			&:after
+				margin-bottom 0
+	
+
+	#projects &
+		margin-top 100px
+
 
 
 .item-section--button
@@ -325,12 +362,12 @@ div[class^='item-parallax-']
 	
 
 .item-parallax-3
-	background-color rgba(160, 130, 204, .2)
-	height 200px
-	right 10%
+	background-color rgba(black, .1)
+	height 500px
+	right 0
 	top 20px
 	transition .8s ease
-	width 200px
+	width 500px
 	
 
 .item-parallax-4
@@ -353,27 +390,27 @@ div[class^='item-parallax-']
 
 
 .item-parallax-6
-	background-color rgba(#145c85, .4)
-	height 220px
-	left -10%
+	background-color rgba(#145c85, .2)
+	height 420px
+	left 0
 	top 20px
 	transition .8s ease
-	width 220px
+	width 420px
 	
 
 .item-parallax-7
-	background-color rgba(#063c48, .5)
+	background-color rgba(#063c48, .2)
 	height 100px
-	left -16%
+	left 4%
 	top 0
 	transition .8s ease
 	width 100px
 	
 
 .item-parallax-8
-	background-color rgba(#440648, .7)
+	background-color rgba(#440648, .1)
 	height 60px
-	left -20%
+	left 10%
 	top 200px
 	transition .8s ease
 	width 60px
@@ -436,24 +473,28 @@ div[class^='item-parallax-']
 // ===============
 
 .item-alternate
-	padding 0 20px
+	@media (max-width desktop - 1)
+		padding 0 20px
 	
 	.row
 		align-items center
 		padding 80px 0
+		
 
+	.item-alternate-wrap
 		@media (min-width desktop)
 			
 			// linhas pares
 			// =========
 				
 			&:nth-of-type(even)
-				flex-direction row-reverse
+				.row
+					flex-direction row-reverse
 				
-				p
-				h3
-				.item-section--button
-					text-align right
+					p
+					h3
+					.item-section--button
+						text-align right
 				
 
 
@@ -461,12 +502,13 @@ div[class^='item-parallax-']
 			// ========
 				
 			&:nth-of-type(odd)
-				.item-alternate--image
-					text-align right
-					
+				.row
+					.item-alternate--image
+						text-align right
+						
 
-				.item-section--button
-					text-align left
+					.item-section--button
+						text-align left
 					
 
 
