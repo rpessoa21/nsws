@@ -90,10 +90,10 @@ jQuery(document).ready(function($){
 			centeredSlides: true,
 			// effect: 'fade',
 			speed: 1000,
-			// autoplay: {
-			// 	delay: 6000,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false,
+			},
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
