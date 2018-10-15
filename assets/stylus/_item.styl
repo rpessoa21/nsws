@@ -175,17 +175,17 @@ svg #wheel
 
 	&:nth-of-type(even)
 		// background-color lightColorTwo
+		color white
 		background-position right
 		
 		&:after
-			background linear-gradient(to right, white, lightColorTwo)
+			background linear-gradient(to right, #18072f, darkColorTwo)
 
 
 	&:nth-of-type(odd)
-		color white
 		
 		&:after
-			background linear-gradient(to right, #18072f, darkColorTwo)
+			background linear-gradient(to right, white, lightColorTwo)
 		
 
 	&:nth-last-of-type(1)
@@ -273,14 +273,15 @@ svg #wheel
 	
 
 	#services &
-		background-color #18072f
+		// background-color #18072f
+		background linear-gradient(to right, white, lightColorTwo)
 		margin-bottom 0
 		margin-top 80px
 		padding 50px 0
 		
 
 		h2
-			color white
+			// color white
 			
 			&:after
 				margin-bottom 0
@@ -294,9 +295,11 @@ svg #wheel
 .item-section--button
 	text-align center
 	
+
 	.card-grid--portfolio &
 	.card-grid--service-list &
 		margin-top 70px
+
 
 	body.home .grid--portfolio &
 		margin-top 60px
@@ -592,7 +595,6 @@ div[class^='item-parallax-']
 	p
 		font-size 13px
 		line-height 1.7
-		text-align center
 
 // back to top
 // ===========
@@ -623,3 +625,50 @@ div[class^='item-parallax-']
 	transform translateY(-50%)
 	width 100%
 	z-index 1
+	
+
+
+
+// caption - div com imagem e um texto ao lado
+// ===========
+
+.item-caption
+	background linear-gradient(to right, white, lightColorTwo)
+	
+
+.item-caption--image
+	line-height 0
+	
+	img
+		@extends .img-responsive
+		
+						
+							
+.item-caption--wrap
+	display flex
+	flex-flow column wrap
+	height 100%
+	justify-content center
+	padding 20px
+	
+	@media (min-width mobile)
+		padding 40px 70px
+	
+
+
+.item-caption--text
+	> *
+		font-family fontSecond
+		font-size 20px
+		
+		@media (min-width tablet)
+			font-size 24px
+			line-height 1.4
+		
+
+	+ .item-caption--description
+		margin-top 30px
+		
+		> *
+			color darkColorMaster
+			
