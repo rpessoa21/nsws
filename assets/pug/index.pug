@@ -12,16 +12,14 @@ block content
 	main.main
 		section.banner--video
 			.item-video--fullscreen
-				//- .js-video.videoWrapper
 				video(autoplay, width="100%", muted, loop)
 					source(src="http://nswsolution.com/videos/luanda.mp4" type="video/mp4")
 					source(src="http://nswsolution.com/videos/luanda.webm" type="video/webm")
 					source(src="http://nswsolution.com/videos/luanda.ogv" type="video/ogv")
-					//- source(src=imgHref + "videos/luanda.mp4" type="video/mp4")
 					
+				
 				.item-banner--fullscreen---downbutton
 					a(href="#under-the-fold")
-						//- img(src="img/arrow-dot.png", alt="")
 						<svg width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
 							<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
 							<path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
@@ -47,30 +45,25 @@ block content
 								p Possuimos uma gama de serviços e produtos informáticos
 
 
-			//- .item-banner--fullscreen(style="background-image: url(" + imgHref + "img/_content/angola.jpg);")
-				.item-banner--fullscreen---primary
-					h2 Temos expertise em soluções para internet
-		
-				.item-banner--fullscreen---second
-					p Somos uma equipe com base em Angola
 
 
 
-		//- section.grid--alternate
-			.container
-				.row
-					.col-xs-12
-						.item-title
-							h2 Sobre a NSWS Solution
 
-				.card-grid--alternate
-					.item-parallax-1
-					.item-parallax-2
-					.row
-						.col-xs-12
-							p Temos <strong>soluções especializadas</strong> em TI para pequenas, médias e grandes companhias, bem como profissionais ágeis.
-						
-							p Contamos com uma <b>equipe altamente qualificada</b>, capaz de oferecer serviço com <b>excelência</b> por um <b>baixo custo e grande benefício</b>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 		section#about
@@ -91,10 +84,6 @@ block content
 									.item-alternate--text.item-animation
 										p Há mais de oito anos, actuando no seu Core Business: Sistemas e Tecnologias de Informação,baseada numa equipa de profissionais Ágeis com vasta experiencia nas áreas de infraestruturas, virtualização, segurança, webdesign, desenvolvimento e integração.
 									
-									//- .item-alternate--button.item-animation
-										.item-section--button
-											a.button(href="about-us.html")
-												span Saiba mais
 							
 
 							.col-xs-12.col-sm-6
@@ -167,7 +156,24 @@ block content
 		
 
 
-		section.grid-mission.item-background-image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		section.grid-mission.item-background-image(style="background-image: url("+imgHref+"/img/bg-art.jpg);")
 			.container
 				.row
 					.col-xs-12
@@ -223,6 +229,25 @@ block content
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		section.grid--portfolio#projects
 			.container
 				.row
@@ -234,16 +259,48 @@ block content
 							.swiper-container.card-slider--single
 								.swiper-wrapper
 									.swiper-slide
-										.item-job--image
-											img(src=imgHref + "img/_content/jobs/coop.jpg", alt="")
+										//- .item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----mobile
+												img(src=imgHref + "img/_content/screenshot/coop/mobile.png", alt="")
 
 									.swiper-slide
-										.item-job--image
-											img(src=imgHref + "img/_content/jobs/coop-mobile.jpg", alt="")
+										//- .item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----tablet
+												img(src=imgHref + "img/_content/screenshot/coop/tablet.png", alt="")
 
 									.swiper-slide
-										.item-job--image
-											img(src=imgHref + "img/_content/jobs/prongila.jpg", alt="")
+										//- .item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----notebook
+												img(src=imgHref + "img/_content/screenshot/coop/notebook.png", alt="")
+
+
+									.swiper-slide
+										//- .item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----tablet
+												img(src=imgHref + "img/_content/screenshot/coop/tablet.png", alt="")
+
+									.swiper-slide
+										//- .item-grid--portfolio---image
+										.item-grid--portfolio---screenshot
+											.item-grid--portfolio---screenshot----notebook
+												img(src=imgHref + "img/_content/screenshot/prongila/notebook1.png", alt="")
+
+
+									//- .swiper-slide
+									//- 	.item-job--image
+									//- 		img(src=imgHref + "img/_content/jobs/coop.jpg", alt="")
+
+									//- .swiper-slide
+									//- 	.item-job--image
+									//- 		img(src=imgHref + "img/_content/jobs/coop-mobile.jpg", alt="")
+
+									//- .swiper-slide
+									//- 	.item-job--image
+									//- 		img(src=imgHref + "img/_content/jobs/prongila.jpg", alt="")
 														
 
 								.swiper-button-prev
@@ -256,13 +313,15 @@ block content
 
 		section#services.no-lateral-gap
 			.container-fluid
-				.row
-					.col-xs-12
-						.item-section--title.item-animation
-							h2 Serviços
+				.item-float-bg-blend(style="")
 
 				.item-caption
 					.container
+						.row
+							.col-xs-12
+								.item-section--title.item-animation
+									h2 Serviços
+
 						.row
 							.col-xs-12.col-sm-6
 								.item-caption--image
@@ -270,9 +329,6 @@ block content
 
 							.col-xs-12.col-sm-6
 								.item-caption--wrap
-									//- .item-caption--text
-										h3 “Gosto de pensar no evento sob todos os aspectos ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultricies bibendum elit, ac facilisis ligula maximus eu. ”
-									
 									.item-caption--text
 										p Em diversas situações, uma segunda opinião ou olhar externo, muitas vezes, podem ser uma mais valia e rico de boas ideias para desenvolver o seu negócio. Principalmente, quando esse olhar vem acompanhado de um amplo know how. Nesta ordem de ideia, temos disponível o seguinte portfólio de produtos e serviços:
 

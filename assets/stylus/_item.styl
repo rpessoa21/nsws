@@ -1,19 +1,5 @@
-.item-banner--fullscreen
-	align-items center
-	background-size cover
-	color white
-	display flex
-	flex-flow column wrap
-	height 100vh
-	justify-content center
-	position relative
-	
-	&:after
-		background-color rgba(black, .6)
-		content ''
-		height 100%
-		position absolute
-		width 100%
+// full banner
+// ===========
 		
 .item-banner--fullscreen---primary
 .item-banner--fullscreen---second
@@ -54,17 +40,12 @@
 	
 	a
 		align-items center
-		// background-color #2899ce
 		border-radius 50%
 		display flex
 		justify-content center
 		height 60px
 		transition .4s ease
 		width 60px
-		
-		&:hover
-			// background-color lighten(#2899ce, 15)
-
 
 
 
@@ -84,11 +65,10 @@ svg #wheel
 
 
 
-// ====================
+// background image cover
 // ====================
 
 .item-background-image
-	background url(../img/bg-art.jpg)
 	background-size cover
 
 
@@ -104,8 +84,8 @@ svg #wheel
 	align-items baseline
 	display flex
 	width 100%
-	// position absolute
-	// right 0
+	position absolute
+	right 0
 
 .item-grid--portfolio---screenshot
 	img
@@ -115,17 +95,28 @@ svg #wheel
 		position relative
 
 .item-grid--portfolio---screenshot----mobile
-	transform translateY(20px)
-	z-index 3
+	@media (min-width tablet)
+		transform translate(20px, -20px)
+		z-index 3
 
 .item-grid--portfolio---screenshot----tablet
-	transform translate(-20px, 10px)
-	z-index 2
+	@media (min-width tablet)
+		transform translate(10px, -10px)
+		z-index 2
 	
 .item-grid--portfolio---screenshot----notebook
-	transform translate(-60px, -14px)
-	z-index 1
+	@media (min-width tablet)
+		transform translate(-60px, -14px)
+		z-index 1
 
+
+
+.swiper-wrapper
+	align-items baseline !important
+	padding 20px
+
+.swiper-slide
+	width auto !important
 
 
 
@@ -274,9 +265,9 @@ svg #wheel
 
 	#services &
 		// background-color #18072f
-		background linear-gradient(to right, white, lightColorTwo)
+		// background linear-gradient(to right, white, lightColorTwo)
 		margin-bottom 0
-		margin-top 80px
+		margin-top 20px
 		padding 50px 0
 		
 
@@ -671,4 +662,15 @@ div[class^='item-parallax-']
 		
 		> *
 			color darkColorMaster
-			
+
+
+
+
+.item-float-bg-blend
+	// background-color red
+	// background-image linear-gradient(to right,#fff,#e1d9c7), url(https://images.unsplash.com/photo-1531295808348-2a4d49dd48f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=369f32014b266d1517ae8b389cacbf94&auto=format&fit=crop&w=1051&q=80)
+	// background-blend-mode multiply
+	height 100vh
+	left 0
+	position absolute
+	width 100%

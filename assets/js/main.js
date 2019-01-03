@@ -90,10 +90,22 @@ jQuery(document).ready(function($){
 			centeredSlides: true,
 			// effect: 'fade',
 			speed: 1000,
-			autoplay: {
-				delay: 6000,
-				disableOnInteraction: false,
+			slidesPerView: 3,
+			// Responsive breakpoints
+			breakpoints: {
+				// when window width is <= 480px
+				480: {
+					slidesPerView: 1,
+				},
+				// when window width is <= 768px
+				768: {
+					slidesPerView: 2,
+				},
 			},
+			// autoplay: {
+			// 	delay: 6000,
+			// 	disableOnInteraction: false,
+			// },
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
