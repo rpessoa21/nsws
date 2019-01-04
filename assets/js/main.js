@@ -90,7 +90,7 @@ jQuery(document).ready(function($){
 			centeredSlides: true,
 			// effect: 'fade',
 			speed: 1000,
-			slidesPerView: 3,
+			slidesPerView: 4,
 			// Responsive breakpoints
 			breakpoints: {
 				// when window width is <= 480px
