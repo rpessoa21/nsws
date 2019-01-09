@@ -99,7 +99,7 @@ jQuery(document).ready(function($){
 				},
 				// when window width is <= 768px
 				768: {
-					slidesPerView: 2,
+					slidesPerView: 1,
 				},
 			},
 			// autoplay: {

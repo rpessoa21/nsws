@@ -116,7 +116,11 @@ svg #wheel
 		padding 20px
 
 	.swiper-slide
-		width auto !important
+		@media (max-width tablet - 1)
+			text-align center
+		
+		@media (min-width tablet)
+			width auto !important
 
 
 
@@ -558,6 +562,9 @@ div[class^='item-parallax-']
 
 .item-grid--mission---li
 	padding 0 30px
+	
+	@media (max-width tablet - 1)
+		margin-bottom 40px
 	
 
 .item-grid--mission---icon

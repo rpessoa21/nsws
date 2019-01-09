@@ -41,7 +41,7 @@
 .header--wrap
 	align-items center
 	display flex
-	height 120px
+	height 80px
 	justify-content space-between
 	overflow hidden
 	position relative
@@ -133,7 +133,7 @@
 .header--hamburguer
 	position absolute
 	right 16px
-	top 40px
+	top 29px
 	
 	header.sticky &
 		@media (min-width menuViewPort)
@@ -189,6 +189,7 @@
 	background-color darkColorTwo
 	padding 60px 0 0
 	
+
 .footer--main
 	font-size 12px
 	text-align center
@@ -199,6 +200,10 @@
 
 
 .footer--logo
+	@media (max-width tablet - 1)
+		margin-bottom 30px
+		text-align center
+
 	svg
 		fill white
 		
