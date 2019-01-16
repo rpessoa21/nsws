@@ -87,19 +87,17 @@ jQuery(document).ready(function($){
 	// =========================
 	try {
 		var galleryTop = new Swiper('.card-slider--single', {
-			centeredSlides: true,
+			// centeredSlides: true,
 			// effect: 'fade',
 			speed: 1000,
-			slidesPerView: 4,
+			slidesPerView: 'auto',
+			slidesPerGroup: 3,
 			// Responsive breakpoints
 			breakpoints: {
-				// when window width is <= 480px
-				480: {
-					slidesPerView: 1,
-				},
 				// when window width is <= 768px
 				768: {
 					slidesPerView: 1,
+					slidesPerGroup: 1,
 				},
 			},
 			// autoplay: {
