@@ -9,7 +9,7 @@ block vars
 
 
 block content
-	main.main
+	main.main#home
 		section.banner--video
 			.item-video--fullscreen
 				video(autoplay, width="100%", muted, loop)
@@ -66,7 +66,7 @@ block content
 
 
 		
-		section#about
+		section#aboutus
 			.item-alternate
 				.item-alternate-wrap
 					.relative
@@ -77,6 +77,7 @@ block content
 					.container
 						.row
 							.col-xs-12.col-sm-6
+								.item-return
 								.item-alternate--texts-wrap
 									.item-alternate--title.item-animation
 										h3 Serviços para facilitar a vida de sua empresa
@@ -127,7 +128,7 @@ block content
 										h3 Sempre prontos a oferecer o melhor
 										
 									.item-alternate--text.item-animation
-										p Precisa de consultoria, esclarecimento ou apoio para alguma tomada de decisão, marque já a sua primeira sessão de consulta sem qualquer compromisso ou custo preenchendo o formulário de contacto e bem-vindo!
+										p Precisa de consultoria, esclarecimento ou apoio para alguma tomada de decisão, marque já a sua primeira sessão de consulta sem qualquer compromisso ou custo preenchendo o <a href="#contact">formulário de contacto</a> e bem-vindo!
 									
 									//- .item-alternate--button.item-animation
 										.item-section--button
@@ -453,14 +454,14 @@ block content
 
 
 				.form-contact--center.item-animation
-					form(action="", method="post")
+					form(action=baseHref + "sendMail.php?target=contato", method="post")
 						label Nome:
-						input(type="text")
+						input(type="text", name="nome", required="required")
 
 						label E-mail:
-						input(type="text")
+						input(type="email", name="email", required="required")
 
 						label Mensagem:
-						textarea
+						textarea(name="msg", required="required")
 
 						input(type="submit")

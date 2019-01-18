@@ -692,3 +692,37 @@ div[class^='item-parallax-']
 
 .item-carousel-next
 	margin-right -40px
+	
+
+
+
+
+
+
+// mensagem de retorno depois que envia o email
+// ==========================
+
+.item-return
+	font-weight 700
+	margin 50px 0 10px
+	padding 10px
+	
+	&:empty
+		display none
+	
+	.conteudo-extra &
+		custom-size(960px)
+	
+	&.erro
+		border 1px solid
+		border-color red
+		color red
+		
+		h4
+			font-size 24px
+			font-weight 700
+			
+	&.sucesso
+		border 1px solid
+		border-color green
+		color green

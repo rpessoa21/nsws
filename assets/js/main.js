@@ -397,22 +397,22 @@ jQuery(document).ready(function($){
 	// ==================
 	// send mail error
 	// ==================
-	// try {
-	// 	var hash = window.location.hash;
-	// 	console.log(hash);
-	// 	if (hash === '#sendError') {
-	// 		$('.item-return').html('<h4>Atenção!</h4><p>Você não preencheu os campos corretamente</p>').addClass('erro');
-	// 	}
-	// 	if (hash === '#sendSuccess') {
-	// 		$('.item-return').html('<p>E-mail enviado com sucesso!</p>').addClass('sucesso');
-	// 	}
+	try {
+		var hash = window.location.hash;
+		console.log(hash);
+		if (hash === '#sendError') {
+			$('.item-return').html('<h4>Atenção!</h4><p>Você não preencheu os campos corretamente</p>').addClass('erro');
+		}
+		if (hash === '#sendSuccess') {
+			$('.item-return').html('<p>E-mail enviado com sucesso!</p>').addClass('sucesso');
+		}
 
-	// 	if (hash === '#conteudo-extra') {
-	// 		$('.item-return').html('<p>Você foi cadastrado com sucesso!</p>').addClass('sucesso');
-	// 	}
-	// } catch(e) {
-	// 	console.log(e);
-	// }
+		if (hash === '#conteudo-extra') {
+			$('.item-return').html('<p>Você foi cadastrado com sucesso!</p>').addClass('sucesso');
+		}
+	} catch(e) {
+		console.log(e);
+	}
 
 
 	// =========================

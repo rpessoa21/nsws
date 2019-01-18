@@ -107,10 +107,10 @@ gulp.task('templates', function() {
     return gulp.src(['./assets/pug/**/*.pug', '!./assets/pug/**/layout.pug', '!./assets/pug/**/_*.pug'])
         .pipe(pug({
             data: {
-                imgHref: 'https://raw.githubusercontent.com/rpessoa21/nsws/master/static/',
-                // imgHref: '/',
-                baseHref: '',
-                // baseHref: 'http://mgstudio.com.br/clientes_mg/' + theme + '/static/',
+                // imgHref: 'https://raw.githubusercontent.com/rpessoa21/nsws/master/static/',
+                imgHref: '/site/',
+                // baseHref: '',
+                baseHref: '/site/',
             },
             pretty: true
         }))

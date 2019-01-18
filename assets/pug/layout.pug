@@ -3,14 +3,14 @@ html(lang="pt-BR")
 	head
 		meta(charset="utf-8")
 		meta(http-equiv='X-UA-Compatible', content='IE=edge; chrome=1')
-		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0')
 		meta(name='designer', content='Rodrigo Pessoa - www.rpessoa.com.br')
-		meta(name='description', content='')
-		meta(name='keywords', content='')
+		meta(name='description', content='Criada com a missão de apoiar as pequenas, médias e grandes companhias nas suas necessidades tecnológicas, tendo uma gama de serviços e produtos informáticos, de modos a permitir às empresas o acesso a tecnologia de ponta ao melhor custo e beneficio.')
+		meta(name='keywords', content='tecnológicas, tecnologia, consultoria, interactiva, soluções eficientes, web design')
 		meta(name="robots", content="index,follow")
 		meta(name='theme-color', content='#6e3895')
 		block title
-		title NSWS Solutions &mdash; #{titlePage}
+		title NSWS Solutions &mdash; Network, Segurança, Web Solutions, Software
 
 		meta(property='og:title', content='NSWS Solutions')
 		meta(property='og:image', content='http://nswsolution.com/img/logo.png')
@@ -49,7 +49,7 @@ html(lang="pt-BR")
 							span.menu-icon
 
 				.header--logo
-					a(href=baseHref + "index.html")
+					a(href="#home")
 						//- img(src=imgHref + "img/logo.png", alt="")
 
 
@@ -73,19 +73,19 @@ html(lang="pt-BR")
 				.header--menu---wrap
 					nav(role="navigation", itemscope="itemscope", itemtype="http://www.schema.org/SiteNavigationElement").menu--primary
 						ul
-							li(class=(bodyClass === 'home')? "current-menu-item" : "")
-								a(href=baseHref + 'index.html', itemprop="url") Home
+							li
+								a(href='#home', itemprop="url").anchor Home
 
-							li(class=(bodyClass === 'quem-somos')? "current-menu-item" : "")
-								a(href='#about', itemprop="url").anchor Quem somos
+							li
+								a(href='#aboutus', itemprop="url").anchor Quem somos
 
-							li(class=(bodyClass === 'servicos')? "current-menu-item" : "")
+							li
 								a(href='#services', itemprop="url").anchor Serviços
 
-							li(class=(bodyClass === 'portfolio')? "current-menu-item" : "")
+							li
 								a(href='#projects', itemprop="url").anchor Portfolio
 
-							li(class=(bodyClass === 'contacto')? "current-menu-item" : "")
+							li
 								a(href='#contact', itemprop="url").anchor Contacto
 
 
