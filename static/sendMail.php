@@ -7,7 +7,7 @@
 		$msg   = nl2br(addslashes(strip_tags($_POST['msg'])));
 
 		if ($nome === "" || $email === "" || $msg === "") {
-			die(header('Location: http://www.nswsolution.com/#sendError'));
+			die(header('Location: http://www.nswsolution.com/site/#sendError'));
 		} else {
 			
 			if (!empty($_POST)) {
@@ -22,8 +22,8 @@
 				<p><strong>Mensagem:</strong> ' . $msg . '</p>
 			';
 
-				require_once('./site/includes/class.smtp.php');
-				require_once('./site/includes/class.phpmailer.php');
+				require_once('http://nswsolution.com/site/includes/class.smtp.php');
+				require_once('http://nswsolution.com/site/includes/class.phpmailer.php');
 
 
 				$mail = new PHPMailer();
@@ -56,19 +56,16 @@
 				if (!$mail->Send()) {
 					echo $mail->ErrorInfo;
 					die();
-					die(header('Location: http://www.nswsolution.com/#sendError'));
+					die(header('Location: http://www.nswsolution.com/site/#sendError'));
 				} else {
 					// echo 'foi?';
-					die(header('Location: http://www.nswsolution.com/#sendSuccess'));
+					die(header('Location: http://www.nswsolution.com/site/#sendSuccess'));
 				}
 
 				
 			}
 		}
 	}
-
-
-
 
 
 ?>

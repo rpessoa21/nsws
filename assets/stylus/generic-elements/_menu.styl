@@ -3,11 +3,7 @@
 	
 	header:not(.sticky) &
 		@media (min-width menuViewPort)
-			transition .7s cubic
-			transform translateX(100%)
-			
-			&.active
-				transform translateX(-60px)
+			transform translate(-60px, 10px)
 
 	
 	@media (min-width menuViewPort)
@@ -27,6 +23,24 @@
 		> li
 			position relative
 			
+			header:not(.sticky) &
+				@media (min-width menuViewPort)
+					opacity 0
+					transform translateY(10px)
+					transition .4s ease
+					
+
+					for i in (1..20)
+						&:nth-child({i})
+							transition-delay i * 40 ms
+							
+					
+			header:not(.sticky) .active&
+				@media (min-width menuViewPort)
+					opacity 1			
+					transform translateY(0px)
+			
+
 			+ li
 				@media (min-width menuViewPort)
 					margin-left 26px
